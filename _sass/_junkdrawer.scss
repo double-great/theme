@@ -2,14 +2,6 @@
   @extend %u-wrap;
 }
 
-.post-list {
-  @extend %unlist;
-
-  li {
-    margin-bottom: 2rem;
-  }
-}
-
 .button {
   display: inline-block;
   margin-bottom: 1rem;
@@ -66,24 +58,6 @@
     z-index: 100;
     display: block;
     padding: 0.5rem 0.75rem;
-  }
-}
-
-.home {
-  h1 {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.25rem;
-
-    .svg-icon {
-      width: inherit;
-      height: inherit;
-      margin-left: -#{$border-thick};
-      vertical-align: text-bottom;
-    }
-  }
-  h2 {
-    font-size: 1.25rem;
   }
 }
 

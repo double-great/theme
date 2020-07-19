@@ -1,0 +1,12 @@
+<div class="post-list-cards">
+  {%- for post in posts -%}
+  <a class="post-list-card" href="{{ post.url | relative_url }}">
+    <img class="post-list-card-image" src="{{site.baseurl}}/{{post.image}}" alt="{{
+    post.title | escape }}" style="{%- if post.position -%}object-position:
+    {{post.position}};"{%- endif -%}" />
+    <div class="post-list-card-title">
+      {{ post.title }}
+    </div>
+  </a>
+  {%- endfor -%}
+</div>

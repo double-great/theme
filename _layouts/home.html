@@ -9,20 +9,6 @@ layout: default
     {% include icon/bookmark.svg %}{{ page.list_title }}
   </h1>
   {%- endif -%}
-  <ul class="post-list">
-    {%- for post in posts -%}
-    <li>
-      {% if post.show_date %}<span class="post-meta"
-        >{{ post.date | date: "%b %-d, %Y" }}</span
-      >{% endif %}
-      <h2>
-        <a class="post-link" href="{%- if post.override_url -%}{{post.override_url}}{%- else -%}{{ post.url | relative_url }}{%- endif -%}">
-          {{ post.title | escape }}
-        </a>
-      </h2>
-      {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
+  {%- if page.list_type == 'cards' -%}{% include home/cards.html %}{% else %}{% include home/list.html %}{%- endif -%}
   {%- endif -%} {%-if page.content_position == 'bottom'-%}{{content}}{%-endif-%}
 </div>
