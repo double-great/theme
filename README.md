@@ -7,7 +7,7 @@ Jekyll theme for [doublegreat.dev](https://doublegreat.dev).
 Add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: great-great-jekyll-theme
+remote_theme: double-great/great-great-jekyll-theme@main
 ```
 
 And add to the `plugins` list:
