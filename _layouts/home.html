@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%-if page.content_position != 'bottom'-%}{{content}}{%-endif-%}{% assign
+  posts = site.posts %} {%- if posts.size > 0 -%} {%- if page.list_title -%}
+  <h1 id="content" class="post-list-heading">
+    {% include icon/bookmark.svg %}{{ page.list_title }}
+  </h1>
+  {%- endif -%}
+  <ul class="post-list">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in posts -%}
+    <li>
+      {% if post.show_date %}<span class="post-meta"
+        >{{ post.date | date: date_format }}</span
+      >{% endif %}
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h2>
+      {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endif -%} {%-if page.content_position == 'bottom'-%}{{content}}{%-endif-%}
+</div>

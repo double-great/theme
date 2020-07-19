@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  background: $color-darkest;
+}
+
+body {
+  margin: 0;
+  color: $color-text-body;
+  font-size: 112.5%; // 18px
+  font-family: $font-body;
+  line-height: 1.5;
+  background-color: $color-white;
+}
+
+a {
+  position: relative;
+
+  &:link,
+  &:visited {
+    color: $color-link;
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  &:focus {
+    color: $color-text-body;
+    text-decoration: none;
+    background-color: $color-highlight;
+    outline: $border-thick solid transparent;
+    outline-offset: 0;
+    box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
+  }
+
+  // subtle, visible "click"
+  &:active {
+    bottom: -#{$border-thin};
+  }
+}
+
+:target {
+  color: $color-text-body;
+  text-decoration: none;
+  background-color: $color-highlight;
+  outline: $border-thick solid transparent;
+  outline-offset: 0;
+  box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
+}
+
+h1,
+%h1,
+h2,
+%h2,
+h3,
+%h3,
+h4,
+%h4,
+h5,
+%h5,
+h6,
+%h6 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: $color-text-heading;
+  font-weight: $font-weight-bold;
+  font-family: $font-body;
+  line-height: $line-height-heading;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+}
+
+h1,
+%h1 {
+  margin-top: 2rem;
+  font-size: 2.25rem;
+}
+
+h2,
+%h2 {
+  font-size: 2rem;
+}
+
+h3,
+%h3 {
+  font-size: 1.75rem;
+}
+
+h4,
+%h4 {
+  font-size: 1.5rem;
+}
+
+h5,
+%h5 {
+  font-size: 1.25rem;
+}
+
+h6,
+%h6 {
+  font-size: 1rem;
+}
+
+%p,
+p {
+  max-width: $content-line-length;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: $line-height-text;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul,
+ol {
+  margin: 0.25rem 0 0.75rem 2rem;
+  padding: 0;
+
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+p + ul,
+p + ol {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+li {
+  font-size: 1rem;
+  line-height: $line-height-text;
+}
+
+pre {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  white-space: pre-wrap;
+  background-color: $color-barely;
+  border-radius: 0.25rem;
+}
+
+code {
+  padding: 0.15rem 0.25rem;
+  background-color: $color-barely;
+  border-radius: 0.25rem;
+}
+
+input,
+select,
+textarea {
+  font-size: 1rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  table & {
+    @extend %u-visually-hidden;
+  }
+}
+
+hr {
+  display: block;
+  box-sizing: content-box;
+  height: $border-thick;
+  margin: 3rem 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-top: $border-thick solid $color-accent;
+}

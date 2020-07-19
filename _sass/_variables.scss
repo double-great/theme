@@ -1,0 +1,40 @@
+$font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica",
+  "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$border-thin: 0.0625rem; // 1px
+$border-thick: 0.1875rem; // 3px
+
+// Colors
+$color-medium: #1e69cd;
+$color-darkest: #203851;
+$color-highlight: #ffdd00;
+
+$color-link: $color-medium;
+$color-link-hover: $color-darkest;
+
+// Grayscale
+$color-white: #fff;
+$color-barely: #f0f0f0;
+$color-accent: #e0e0e0;
+$color-border: #cbcbcb;
+$color-text-accent: #757575;
+$color-text-body: #333;
+$color-text-heading: #222;
+
+$mq-smallest: 20em; // 320px
+$mq-small: 40em; // 640px
+$mq-medium: 50em; // 800px
+$mq-large: 70em; // 1120px
+
+$content-max-width: $mq-small;
+$content-line-length: 70ch;
+
+$line-height-reset: 1;
+$line-height-heading: 1.2;
+$line-height-text: 1.5;

@@ -1,0 +1,59 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div>
+      <p>{{ site.description | escape }}</p>
+    </div>
+
+    <div class="social-links">
+      <ul class="social-media-list">
+        <li>
+          <a href="{{ 'feed.xml' | relative_url }}">
+            {% include icon/rss.svg %}<span>Subscribe</span>
+          </a>
+        </li>
+
+        {%- if site.github -%}
+        <li>
+          <a
+            rel="me"
+            href="https://github.com/{{ site.github }}"
+            title="{{ site.github | escape }}"
+            >{% include icon/github.svg %}<span>GitHub</span></a
+          >
+        </li>
+        {%- endif -%}
+      </ul>
+    </div>
+    <div class="site-footer-logo">
+      <p>Made by <a href="{{site.url}}">Double Great</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var menuButton = document.querySelector("#db-menu-button"),
+    menu = document.querySelector("#db-site-menu");
+
+  if (menu && menuButton) {
+    menuHide();
+    menuButton.addEventListener("click", menuToggle, false);
+  }
+
+  function menuToggle(event) {
+    if (event.target.getAttribute("aria-expanded") == "false") {
+      menuShow();
+    } else {
+      menuHide();
+    }
+  }
+
+  function menuShow() {
+    menu.setAttribute("aria-hidden", "false");
+    menuButton.setAttribute("aria-expanded", "true");
+  }
+
+  function menuHide() {
+    menu.setAttribute("aria-hidden", "true");
+    menuButton.setAttribute("aria-expanded", "false");
+  }
+</script>
