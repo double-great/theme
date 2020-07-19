@@ -5,7 +5,7 @@ layout: compress
 <html lang="en">
   {%- include head.html -%}
 
-  <body>
+  <body class="page-{{page.layout | slugify}}">
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
