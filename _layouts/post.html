@@ -5,19 +5,17 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <div class="post-meta">
-      {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y"
-      -%}
       <time
         class="dt-published"
         datetime="{{ page.date | date_to_xmlschema }}"
         itemprop="datePublished"
       >
-        {{ page.date | date: date_format }}
+        {{ page.date | date: "%B %-d, %Y" }}
       </time>
       {%- if page.modified_date -%} ~ {%- assign mdate = page.modified_date |
       date_to_xmlschema -%}
       <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-        {{ mdate | date: date_format }}
+        {{ mdate | date: "%B %-d, %Y" }}
       </time>
       {%- endif -%}
     </div>
