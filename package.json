@@ -1,7 +1,7 @@
 {
   "name": "great-great-jekyll-theme",
   "version": "0.1.0",
-  "description": "Custom Jekyll theme for doublegreat.dev",
+  "description": "Jekyll theme for doublegreat.dev",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint",
