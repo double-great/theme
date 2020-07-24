@@ -1,9 +1,18 @@
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
 
-  &::after,
-  &::before {
-    box-sizing: border-box;
+  @media (prefers-reduced-motion: reduce) {
+    // stylelint-disable declaration-no-important, plugin/no-unsupported-browser-features
+    background-attachment: initial !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    animation-duration: 1ms !important;
+    animation-delay: -1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    // stylelint-enable
   }
 }
 
@@ -204,6 +213,12 @@ hr {
   border-top: $border-thick solid $color-accent;
 }
 
-img {
+img,
+svg,
+video,
+canvas {
   max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
 }
