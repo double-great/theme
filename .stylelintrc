@@ -126,14 +126,12 @@
     "string-quotes": "double",
     "unit-no-unknown": true,
     "unit-case": "lower",
-    "unit-whitelist": ["em", "rem", "%", "s", "ch", "vh", "vw", "deg", "fr"],
+    "unit-whitelist": ["em", "rem", "%", "s", "ch", "vh", "vw", "deg", "fr", "ms"],
     "value-list-comma-newline-after": null,
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
     "value-no-vendor-prefix": true,
 
-
-    "a11y/media-prefers-reduced-motion": [true, { "severity": "warning" }],
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
     "a11y/font-size-is-readable": [true, { "severity": "warning" }],
