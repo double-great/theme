@@ -132,8 +132,6 @@
     "value-list-comma-space-before": "never",
     "value-no-vendor-prefix": true,
 
-
-    "a11y/media-prefers-reduced-motion": [true, { "severity": "warning" }],
     "a11y/no-outline-none": true,
     "a11y/selector-pseudo-class-focus": true,
     "a11y/font-size-is-readable": [true, { "severity": "warning" }],
