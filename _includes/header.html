@@ -4,10 +4,7 @@
 
   <div class="wrapper">
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}"
-      >{%-if site.logo -%}
-      <div class="site-title-icon">{{site.logo}}</div>
-      {%- endif -%} {{ site.title | escape }}</a
-    >
+      ><div class="site-title-icon">{% include icon/logo.svg %}</div>{{ site.title | escape }}</a>
 
     {%-if page_paths-%}
     <button
