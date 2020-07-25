@@ -1,7 +1,21 @@
 ---
 title: Style Guide
-layout: page
+layout: default
 ---
+<h1>{{ page.title }}</h1>
+
+<h2 id="colors">Colors</h2>
+<div class="swatch" style="background-color:#1e69cd;">
+  <pre>$color-medium: #1e69cd;</pre>
+</div>
+
+<div class="swatch" style="background-color:#203851;">
+  <pre>$color-darkest: #203851;</pre>
+</div>
+
+<div class="swatch" style="background-color:#ffdd00;">
+  <pre>$color-highlight: #ffdd00;</pre>
+</div>
 
 <h2 id="headings">Headings</h2>
 <h1>Heading 1</h1>
@@ -10,7 +24,62 @@ layout: page
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
-<hr />
+<hr>
+<div class="home">
+  <h1 id="content" class="post-list-heading">{% include icon/bookmark.svg %} Home Heading 1 with icon</h1>
+  <ul class="post-list">
+    <li>
+      <h2> <a class="post-link" href="#">post with a name of 1</a> </h2>
+      <p>Post 1 excerpt and so on</p>
+    </li>
+    <li>
+      <h2> <a class="post-link" href="#">what comes after post 2?</a> </h2>
+      <p>Post 2 excerpt and so on</p>
+    </li>
+    <li>
+      <h2> <a class="post-link" href="#">it's post 3</a> </h2>
+      <p>Post 3 excerpt and so on</p>
+    </li>
+    <li>
+      <h2> <a class="post-link" href="#">that's what this example is 4</a> </h2>
+      <p>Post 4 excerpt and so on</p>
+    </li>
+  </ul>
+</div>
+<hr>
+<div class="home">
+  <div class="post-list-cards">
+    <a class="post-list-card" href="#">
+      <img class="post-list-card-image" src="https://dummyimage.com/1600x800/000/fff" alt="Example 1" style="object-position: left center;">
+      <div class=" post-list-card-title"> Example 1 </div>
+    </a>
+    <a class="post-list-card" href="#">
+      <img class="post-list-card-image" src="https://dummyimage.com/1600x800/000/fff" alt="Example 2" style="object-position: left center;">
+      <div class=" post-list-card-title"> Example 2 </div>
+    </a>
+    <a class="post-list-card" href="#">
+      <img class="post-list-card-image" src="https://dummyimage.com/1600x800/000/fff" alt="Example 3" style="object-position: left center;">
+      <div class=" post-list-card-title"> Example 3 </div>
+    </a>
+    <a class="post-list-card" href="#">
+      <img class="post-list-card-image" src="https://dummyimage.com/1600x800/000/fff" alt="Example 4" style="object-position: left center;">
+      <div class=" post-list-card-title"> Example 4 </div>
+    </a>
+    <a class="post-list-card" href="#">
+      <img class="post-list-card-image" src="https://dummyimage.com/1600x800/000/fff" alt="Example 5" style="object-position: left center;">
+      <div class=" post-list-card-title"> Example 5 </div>
+    </a>
+    <a class="post-list-card" href="#">
+      <img class="post-list-card-image" src="https://dummyimage.com/1600x800/000/fff" alt="Example 6" style="object-position: left center;">
+      <div class=" post-list-card-title"> Example 6 </div>
+    </a>
+    <a class="post-list-card" href="#">
+      <img class="post-list-card-image" src="https://dummyimage.com/1600x800/000/fff" alt="Example 7" style="object-position: left center;">
+      <div class=" post-list-card-title"> Example 7 </div>
+    </a>
+  </div>
+</div>
+<hr>
 <h3 id="headings-with-text">Headings with Text</h3>
 <h1>Heading 1</h1>
 <p>
@@ -48,7 +117,7 @@ layout: page
   Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.
   Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
 </p>
-<hr />
+<hr>
 <h2 id="text-block">Block Elements</h2>
 <h3 id="paragraph">Paragraphs and Images</h3>
 <p>
@@ -109,7 +178,7 @@ layout: page
   <figcaption>The figcaption element example</figcaption>
 </figure>
 <h3>Horizontal Rule</h3>
-<hr />
+<hr>
 <h2 id="text-elements">Text Elements</h2>
 <p><button class="button">Button Element</button></p>
 <p>
@@ -141,7 +210,7 @@ layout: page
 <p>The <sub>sub element</sub> example</p>
 <p>The <sup>sup element</sup> example</p>
 <p>The <time datetime="2020-01-01 12:00">time element</time> example</p>
-<hr />
+<hr>
 <h2 id="monospace">Monospace / Preformatted</h2>
 <p>Code block wrapped in "pre" and "code" tags</p>
 <pre><code>// Loop through Divs using Javascript.
@@ -152,15 +221,14 @@ for (i = 0; i &lt; divs.length; ++i) {
 }</code></pre>
 <p>Monospace Text wrapped in "pre" tags</p>
 <pre>
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/p&gt;</pre
->
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.&lt;/p&gt;</pre>
 <p>
   Paragraph with inline <code>&lt;code&gt;</code> tag. Lorem ipsum dolor sit
   amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque
   aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam
   libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.
 </p>
-<hr />
+<hr>
 <h2 id="list-types">List Types</h2>
 <h3>Ordered List</h3>
 <ol>
