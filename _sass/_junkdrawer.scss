@@ -212,19 +212,20 @@
 }
 
 .site-title-icon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 1.75rem;
   height: 1.75rem;
   margin-right: 0.5rem;
   text-align: center;
-  vertical-align: baseline;
+  vertical-align: middle;
   background-color: $color-link;
   border-radius: 100%;
   svg {
     width: 1.25rem;
     height: 1.25rem;
     color: $color-barely;
-    vertical-align: text-top;
   }
 }
 
