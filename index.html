@@ -6,9 +6,19 @@ layout: default
 
 <h2 id="variables">Variables</h2>
 
-<table class="style-table" id="variabledata">
+<table class="style-table">
   <thead><tr><th class="fix" scope="col">Variable name</th><th scope="col">Value</th></tr></thead>
-  <tbody></tbody>
+  <tbody>
+    {%-for key in site.data.variables-%}
+    {%-assign varName = key[0]-%}
+    {%-assign varValue = key[1]-%}
+    {%-capture inline-%}{%-if varName contains '$color-'-%}border-left: 2rem solid {{varValue}}; padding: .5rem;{%-endif-%}{%-endcapture-%}
+    <tr>
+      <td>{{varName}}</td>
+      <td style="{{inline}}" class="{{varName | replace: "$", "u-"}}">{{varValue}}</td>
+    </tr>
+    {%-endfor-%}
+  </tbody>
 </table>
 
 <h2 id="headings">Headings</h2>
@@ -264,56 +274,3 @@ for (i = 0; i &lt; divs.length; ++i) {
   </li>
   <li>List Item 4</li>
 </ul>
-
-<script>
-(function variables () {
-  "use strict";
-
-  var table = document.getElementById("variabledata"),
-    tableBody,
-    tblRow,
-    key,
-    value,
-    inline,
-    i;
-
-  if (table) {
-    tableBody = table.getElementsByTagName("tbody")[0];
-  }
-  if (tableBody) {
-    fetchJSONFile("assets/variables.json", function parseJSON (data) {
-      for (i in data) {
-        if ({}.hasOwnProperty.call(data, i)) {
-          key = i;
-          value = data[i];
-          inline = "";
-          if (key.indexOf("$color-") !== -1) {
-            inline = "style=\"border-left: 2em solid " + value + "; padding: .5em;\" ";
-          }
-          tblRow = document.createElement("tr");
-          tblRow.innerHTML = "<tr><td>" + key + "</td><td><span " + inline + " class=\"" + key.replace("$", "u-") + "\">" + value + "</span></td></tr>";
-          table.appendChild(tblRow);
-        }
-      }
-    });
-  }
-
-  function fetchJSONFile (path, callback) {
-    var httpRequest = new XMLHttpRequest(),
-      data;
-    httpRequest.onreadystatechange = function onreadystatechange () {
-      if (httpRequest.readyState === 4) {
-        if (httpRequest.status === 200) {
-          data = JSON.parse(httpRequest.responseText);
-          if (callback) {
-            return callback(data);
-          }
-        }
-      }
-      return false;
-    };
-    httpRequest.open("GET", path);
-    httpRequest.send();
-  }
-}());
-</script>

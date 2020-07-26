@@ -8,7 +8,7 @@
     "pretty-quick": "pretty-quick",
     "stylelint": "stylelint  \"_sass/**/*.scss\" --fix && npm run tokenize",
     "lint": "npm run pretty-quick && npm run stylelint",
-    "tokenize": "scss-to-json \"_sass/_variables.scss\" > \"assets/variables.json\""
+    "tokenize": "scss-to-json \"_sass/_variables.scss\" > \"_data/variables.json\""
   },
   "repository": {
     "type": "git",
