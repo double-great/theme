@@ -245,9 +245,9 @@
 }
 
 .style-table {
-  table-layout: fixed;
-  max-width: 100%;
   width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
 
   th,
   td {
@@ -260,8 +260,8 @@
   }
 
   td {
-    word-break: break-word;
     display: table-cell;
+    word-break: break-word;
   }
 }
 
