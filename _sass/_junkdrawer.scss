@@ -249,19 +249,19 @@
   max-width: 100%;
   width: 100%;
 
+  th,
+  td {
+    padding: 0.5rem;
+    border-bottom: $border-thin solid $color-border;
+  }
+
   th {
     text-align: left;
   }
 
   td {
-    padding: 0.5rem;
-    border-bottom: $border-thin solid $color-border;
     word-break: break-word;
     display: table-cell;
-  }
-
-  .fix {
-    min-width: 15rem;
   }
 }
 
