@@ -10,22 +10,35 @@ $font-weight-black: 900;
 $border-thin: 0.0625rem; // 1px
 $border-thick: 0.1875rem; // 3px
 
-// Colors
-$color-medium: #1e69cd;
-$color-darkest: #203851;
-$color-highlight: #ffdd00;
+$colors: (
+  medium: #1e69cd,
+  darkest: #203851,
+  highlight: #ffdd00,
+  white: #fff,
+  barely: #f0f0f0,
+  accent: #e0e0e0,
+  border: #cbcbcb,
+  text-accent: #757575,
+  text-body: #333,
+  text-heading: #222,
+);
 
-$color-link: $color-medium;
-$color-link-hover: $color-darkest;
+// Colors
+$color-medium: map-get($colors, medium);
+$color-darkest: map-get($colors, darkest);
+$color-highlight: map-get($colors, highlight);
+
+$color-link: map-get($colors, medium);
+$color-link-hover: map-get($colors, darkest);
 
 // Grayscale
-$color-white: #fff;
-$color-barely: #f0f0f0;
-$color-accent: #e0e0e0;
-$color-border: #cbcbcb;
-$color-text-accent: #757575;
-$color-text-body: #333;
-$color-text-heading: #222;
+$color-white: map-get($colors, white); // stylelint-disable-line
+$color-barely: map-get($colors, barely);
+$color-accent: map-get($colors, accent);
+$color-border: map-get($colors, border);
+$color-text-accent: map-get($colors, text-accent);
+$color-text-body: map-get($colors, text-body);
+$color-text-heading: map-get($colors, text-heading);
 
 $mq-smallest: 20em; // 320px
 $mq-small: 40em; // 640px

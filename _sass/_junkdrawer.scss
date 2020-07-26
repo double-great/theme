@@ -243,10 +243,34 @@
   margin: 0 auto;
 }
 
-.swatch {
-  padding-top: 4rem;
+.swatches {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, 9rem);
+}
 
-  pre {
-    border-radius: 0;
+.swatch {
+  width: 9rem;
+}
+
+.swatch-title {
+  padding: 0.5rem 0.25rem;
+  font-size: 0.85rem;
+  font-family: monospace;
+  text-align: center;
+  border: $border-thin solid $color-border;
+  border-top: 0;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.swatch-color {
+  height: 6rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+// stylelint-disable-next-line
+@each $name, $value in $colors {
+  .swatch#{"-color-" + $name} {
+    background: #{$value};
   }
 }

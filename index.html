@@ -1,20 +1,29 @@
 ---
 title: Style Guide
 layout: default
+swatches:
+- medium
+- darkest
+- highlight
+- white
+- barely
+- accent
+- border
+- text-accent
+- text-body
+- text-heading
 ---
 <h1>{{ page.title }}</h1>
 
 <h2 id="colors">Colors</h2>
-<div class="swatch" style="background-color:#1e69cd;">
-  <pre>$color-medium: #1e69cd;</pre>
-</div>
 
-<div class="swatch" style="background-color:#203851;">
-  <pre>$color-darkest: #203851;</pre>
+<div class="swatches">
+{%-for swatch in page.swatches-%}
+<div class="swatch">
+  <div class="swatch-color swatch-color-{{swatch}}"></div>
+  <div class="swatch-title">$color-{{swatch}}</div>
 </div>
-
-<div class="swatch" style="background-color:#ffdd00;">
-  <pre>$color-highlight: #ffdd00;</pre>
+{%-endfor-%}
 </div>
 
 <h2 id="headings">Headings</h2>
