@@ -12,10 +12,9 @@ layout: default
     {%-for key in site.data.variables-%}
     {%-assign varName = key[0]-%}
     {%-assign varValue = key[1]-%}
-    {%-capture inline-%}{%-if varName contains '$color-'-%}border-left: 2rem solid {{varValue}}; padding: .5rem;{%-endif-%}{%-endcapture-%}
     <tr>
       <td>{{varName}}</td>
-      <td style="{{inline}}" class="{{varName | replace: "$", "u-"}}">{{varValue}}</td>
+      <td class="{{varName | replace: "$", "u-"}}">{%-if varName contains '$color-'-%}<div class="swatch" style="background-color: {{varValue}}"></div>{%-endif-%}{{varValue}}</td>
     </tr>
     {%-endfor-%}
   </tbody>

@@ -263,6 +263,16 @@
     display: table-cell;
     word-break: break-word;
   }
+
+  .swatch {
+    position: relative;
+    top: 0.075rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+  }
 }
 
 .u-font-weight-light {
