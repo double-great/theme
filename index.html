@@ -4,18 +4,22 @@ layout: default
 ---
 <h1>{{ page.title }}</h1>
 
-<h2 id="colors">Colors</h2>
-<div class="swatch" style="background-color:#1e69cd;">
-  <pre>$color-medium: #1e69cd;</pre>
-</div>
+<h2 id="variables">Variables</h2>
 
-<div class="swatch" style="background-color:#203851;">
-  <pre>$color-darkest: #203851;</pre>
-</div>
-
-<div class="swatch" style="background-color:#ffdd00;">
-  <pre>$color-highlight: #ffdd00;</pre>
-</div>
+<table class="style-table">
+  <thead><tr><th class="fix" scope="col">Variable name</th><th scope="col">Value</th></tr></thead>
+  <tbody>
+    {%-for key in site.data.variables-%}
+    {%-assign varName = key[0]-%}
+    {%-assign varValue = key[1]-%}
+    {%-capture inline-%}{%-if varName contains '$color-'-%}border-left: 2rem solid {{varValue}}; padding: .5rem;{%-endif-%}{%-endcapture-%}
+    <tr>
+      <td>{{varName}}</td>
+      <td style="{{inline}}" class="{{varName | replace: "$", "u-"}}">{{varValue}}</td>
+    </tr>
+    {%-endfor-%}
+  </tbody>
+</table>
 
 <h2 id="headings">Headings</h2>
 <h1>Heading 1</h1>

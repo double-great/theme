@@ -1,5 +1,7 @@
-$font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica",
-  "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$font-body-webfont: "Inter";
+$font-body-fallback: "Helvetica", "Arial";
+$font-body-default: sans-serif;
+$font-body: $font-body-webfont, $font-body-fallback, $font-body-default;
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
@@ -21,7 +23,6 @@ $color-link-hover: $color-darkest;
 // Grayscale
 $color-white: #fff;
 $color-barely: #f0f0f0;
-$color-accent: #e0e0e0;
 $color-border: #cbcbcb;
 $color-text-accent: #757575;
 $color-text-body: #333;

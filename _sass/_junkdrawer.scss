@@ -244,10 +244,91 @@
   margin: 0 auto;
 }
 
-.swatch {
-  padding-top: 4rem;
-
-  pre {
-    border-radius: 0;
+.style-table {
+  th {
+    text-align: left;
   }
+
+  td {
+    padding: 0.5rem;
+    border-bottom: $border-thin solid $color-border;
+  }
+
+  .fix {
+    min-width: 15rem;
+  }
+}
+
+.u-font-weight-light {
+  font-weight: $font-weight-light;
+}
+
+.u-font-weight-regular {
+  font-weight: $font-weight-regular;
+}
+
+.u-font-weight-medium {
+  font-weight: $font-weight-medium;
+}
+
+.u-font-weight-bold {
+  font-weight: $font-weight-bold;
+}
+
+.u-font-weight-black {
+  font-weight: $font-weight-black;
+}
+
+.u-font-body {
+  font-family: $font-body;
+}
+
+.u-font-body-fallback {
+  font-family: $font-body-fallback;
+}
+
+.u-font-body-default {
+  font-family: $font-body-default;
+}
+
+%u-line-height {
+  display: block;
+  text-align: center;
+  background-color: $color-barely;
+}
+
+.u-line-height-reset {
+  @extend %u-line-height;
+
+  line-height: $line-height-reset;
+}
+
+.u-line-height-heading {
+  @extend %u-line-height;
+
+  line-height: $line-height-heading;
+}
+
+.u-line-height-text {
+  @extend %u-line-height;
+
+  line-height: $line-height-text;
+}
+
+%u-border {
+  display: inline-block;
+  padding: 0.5rem;
+  border: $border-thin solid $color-border;
+}
+
+.u-border-thin {
+  @extend %u-border;
+
+  border: $border-thin solid $color-border;
+}
+
+.u-border-thick {
+  @extend %u-border;
+
+  border: $border-thick solid $color-border;
 }
