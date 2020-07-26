@@ -14,7 +14,7 @@ layout: default
     {%-assign varValue = key[1]-%}
     <tr>
       <td>{{varName}}</td>
-      <td class="{{varName | replace: "$", "u-"}}">{%-if varName contains '$color-'-%}<div class="swatch" style="background-color: {{varValue}}"></div>{%-endif-%}{{varValue}}</td>
+      <td><div class="{{varName | replace: "$", "u-"}}">{%-if varName contains '$color-'-%}<div class="swatch" style="background-color: {{varValue}}"></div>{%-endif-%}{{varValue}}</div></td>
     </tr>
     {%-endfor-%}
   </tbody>
