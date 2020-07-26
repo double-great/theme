@@ -16,7 +16,6 @@ $colors: (
   highlight: #ffdd00,
   white: #fff,
   barely: #f0f0f0,
-  accent: #e0e0e0,
   border: #cbcbcb,
   text-accent: #757575,
   text-body: #333,
@@ -34,7 +33,6 @@ $color-link-hover: map-get($colors, darkest);
 // Grayscale
 $color-white: map-get($colors, white); // stylelint-disable-line
 $color-barely: map-get($colors, barely);
-$color-accent: map-get($colors, accent);
 $color-border: map-get($colors, border);
 $color-text-accent: map-get($colors, text-accent);
 $color-text-body: map-get($colors, text-body);
