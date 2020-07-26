@@ -245,17 +245,33 @@
 }
 
 .style-table {
-  th {
-    text-align: left;
-  }
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
 
+  th,
   td {
     padding: 0.5rem;
     border-bottom: $border-thin solid $color-border;
   }
 
-  .fix {
-    min-width: 15rem;
+  th {
+    text-align: left;
+  }
+
+  td {
+    display: table-cell;
+    word-break: break-word;
+  }
+
+  .swatch {
+    position: relative;
+    top: 0.075rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
   }
 }
 
