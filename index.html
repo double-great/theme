@@ -1,29 +1,15 @@
 ---
 title: Style Guide
 layout: default
-swatches:
-- medium
-- darkest
-- highlight
-- white
-- barely
-- border
-- text-accent
-- text-body
-- text-heading
 ---
 <h1>{{ page.title }}</h1>
 
-<h2 id="colors">Colors</h2>
+<h2 id="variables">Variables</h2>
 
-<div class="swatches">
-{%-for swatch in page.swatches-%}
-<div class="swatch">
-  <div class="swatch-color swatch-color-{{swatch}}"></div>
-  <div class="swatch-title">$color-{{swatch}}</div>
-</div>
-{%-endfor-%}
-</div>
+<table class="style-table" id="variabledata">
+  <thead><tr><th class="fix" scope="col">Variable name</th><th scope="col">Value</th></tr></thead>
+  <tbody></tbody>
+</table>
 
 <h2 id="headings">Headings</h2>
 <h1>Heading 1</h1>
@@ -278,3 +264,56 @@ for (i = 0; i &lt; divs.length; ++i) {
   </li>
   <li>List Item 4</li>
 </ul>
+
+<script>
+(function variables () {
+  "use strict";
+
+  var table = document.getElementById("variabledata"),
+    tableBody,
+    tblRow,
+    key,
+    value,
+    inline,
+    i;
+
+  if (table) {
+    tableBody = table.getElementsByTagName("tbody")[0];
+  }
+  if (tableBody) {
+    fetchJSONFile("assets/variables.json", function parseJSON (data) {
+      for (i in data) {
+        if ({}.hasOwnProperty.call(data, i)) {
+          key = i;
+          value = data[i];
+          inline = "";
+          if (key.indexOf("$color-") !== -1) {
+            inline = "style=\"border-left: 2em solid " + value + "; padding: .5em;\" ";
+          }
+          tblRow = document.createElement("tr");
+          tblRow.innerHTML = "<tr><td>" + key + "</td><td><span " + inline + " class=\"" + key.replace("$", "u-") + "\">" + value + "</span></td></tr>";
+          table.appendChild(tblRow);
+        }
+      }
+    });
+  }
+
+  function fetchJSONFile (path, callback) {
+    var httpRequest = new XMLHttpRequest(),
+      data;
+    httpRequest.onreadystatechange = function onreadystatechange () {
+      if (httpRequest.readyState === 4) {
+        if (httpRequest.status === 200) {
+          data = JSON.parse(httpRequest.responseText);
+          if (callback) {
+            return callback(data);
+          }
+        }
+      }
+      return false;
+    };
+    httpRequest.open("GET", path);
+    httpRequest.send();
+  }
+}());
+</script>
