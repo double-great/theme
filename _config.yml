@@ -10,6 +10,10 @@ github: double-great/great-great-jekyll-theme
 
 permalink: /:title/
 
+header_pages:
+  - post.md
+  - index.html
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
