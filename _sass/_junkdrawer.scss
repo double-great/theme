@@ -245,23 +245,8 @@
 }
 
 .style-table {
-  width: 100%;
-  max-width: 100%;
-  table-layout: fixed;
-
-  th,
-  td {
-    padding: 0.5rem;
-    border-bottom: $border-thin solid $color-border;
-  }
-
-  th {
-    text-align: left;
-  }
-
   td {
     display: table-cell;
-    word-break: break-word;
   }
 
   .swatch {
