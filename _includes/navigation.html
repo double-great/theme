@@ -10,7 +10,7 @@
     {% include icon/menu.svg %}
   </button>
 
-  <ul id="db-site-menu" role="menu" aria-labelledby="db-menu-button">
+  <ul class="pre-js" id="db-site-menu" role="menu" aria-labelledby="db-menu-button">
     {%- for path in page_paths -%} {%- assign my_page = site.pages | where:
     "path", path | first -%} {%- if my_page.title -%}
     <li role="none">

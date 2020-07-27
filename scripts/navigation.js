@@ -42,6 +42,7 @@ Menubutton.prototype.init = function () {
   );
 
   if (popupMenu) {
+    popupMenu.classList.remove("pre-js");
     this.popupMenu = new PopupMenuLinks(popupMenu, this);
     this.popupMenu.init();
   }
