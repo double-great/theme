@@ -222,3 +222,30 @@ canvas {
   vertical-align: middle;
   border: 0;
 }
+
+kbd {
+  display: inline-block;
+  padding: 0 0.25rem;
+  white-space: nowrap;
+  background-color: $color-barely;
+  border: $border-thin solid $color-border;
+  border-radius: 0.25rem;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 0.5rem 1rem;
+    word-break: break-word;
+    border: $border-thin solid $color-border;
+  }
+
+  th {
+    text-align: left;
+    background: $color-barely;
+  }
+}
