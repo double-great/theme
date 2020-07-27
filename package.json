@@ -8,7 +8,8 @@
     "pretty-quick": "pretty-quick",
     "stylelint": "stylelint  \"_sass/**/*.scss\" --fix && npm run tokenize",
     "lint": "npm run pretty-quick && npm run stylelint",
-    "tokenize": "scss-to-json \"_sass/_variables.scss\" > \"_data/variables.json\""
+    "tokenize": "scss-to-json \"_sass/_variables.scss\" > \"_data/variables.json\"",
+    "uglify": "uglifyjs scripts/navigation.js -o scripts/navigation.min.js && git add scripts/navigation.min.js"
   },
   "repository": {
     "type": "git",
@@ -32,11 +33,12 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-no-unsupported-browser-features": "^4.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.18.0"
+    "stylelint-scss": "^3.18.0",
+    "uglify-js": "^3.10.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run stylelint && pretty-quick --staged --verbose"
+      "pre-commit": "npm run stylelint && pretty-quick --staged --verbose && npm run uglify"
     }
   },
   "dependencies": {}
