@@ -29,3 +29,15 @@
     </div>
   </div>
 </footer>
+
+{%-if site.header_pages-%}
+<script type="text/javascript" src="{{site.baseurl}}/scripts/navigation.js"></script>
+
+<script type="text/javascript">
+  window.onload = function () {
+    var menubutton = new Menubutton(document.getElementById("db-menu-button"));
+    document.getElementById("db-site-menu").setAttribute("aria-hidden", "true");
+    menubutton.init();
+  };
+</script>
+{%- endif -%}

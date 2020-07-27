@@ -1,3 +1,31 @@
+.site-navigation {
+  position: relative;
+}
+ul[role="menu"] {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $color-barely;
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+ul[role="menu"] li {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="menu"] a[role="menuitem"],
+ul[role="menu"] a[role="menuitem"]:visited {
+  display: block;
+  width: 15em;
+  padding: 0.5rem 1rem;
+}
 .site-menu-button {
   width: 1.75rem;
   height: 1.75rem;
@@ -26,27 +54,5 @@
     outline: $border-thick solid transparent;
     outline-offset: 0;
     box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
-  }
-}
-
-.site-menu {
-  display: block;
-  width: 100%;
-  margin-top: 1rem;
-  background: $color-barely;
-  border-radius: 0.25rem;
-
-  &[aria-hidden="true"] {
-    display: none;
-  }
-
-  .page-link {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    border-bottom: $border-thin solid $color-white;
-    &:last-child {
-      border-bottom: 0;
-    }
   }
 }

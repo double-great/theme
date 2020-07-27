@@ -1,46 +1,26 @@
-<button
-  id="db-menu-button"
-  class="site-menu-button"
-  aria-label="Toggle menu"
-  aria-controls="db-site-menu"
-  aria-expanded="true"
->
-  {% include icon/menu.svg %}
-</button>
-
-<nav id="db-site-menu" aria-hidden="true" class="site-menu">
-  {%- for path in page_paths -%} {%- assign my_page = site.pages | where:
-  "path", path | first -%} {%- if my_page.title -%}
-  <a class="page-link" href="{{ my_page.url | relative_url }}"
-    >{{ my_page.title | escape }}</a
+<div class="site-navigation">
+  <button
+    id="db-menu-button"
+    class="site-menu-button"
+    aria-label="Toggle menu"
+    aria-controls="db-site-menu"
+    aria-haspopup="true"
+    aria-expanded="false"
   >
-  {%- endif -%} {%- endfor -%}
-</nav>
+    {% include icon/menu.svg %}
+  </button>
 
-<script>
-  var menuButton = document.querySelector("#db-menu-button"),
-    menu = document.querySelector("#db-site-menu");
-
-  if (menu && menuButton) {
-    menuHide();
-    menuButton.addEventListener("click", menuToggle, false);
-  }
-
-  function menuToggle(event) {
-    if (event.target.getAttribute("aria-expanded") == "false") {
-      menuShow();
-    } else {
-      menuHide();
-    }
-  }
-
-  function menuShow() {
-    menu.setAttribute("aria-hidden", "false");
-    menuButton.setAttribute("aria-expanded", "true");
-  }
-
-  function menuHide() {
-    menu.setAttribute("aria-hidden", "true");
-    menuButton.setAttribute("aria-expanded", "false");
-  }
-</script>
+  <ul id="db-site-menu" role="menu" aria-labelledby="db-menu-button">
+    {%- for path in page_paths -%} {%- assign my_page = site.pages | where:
+    "path", path | first -%} {%- if my_page.title -%}
+    <li role="none">
+      <a
+        role="menuitem"
+        class="page-link"
+        href="{{ my_page.url | relative_url }}"
+        >{{ my_page.title | escape }}</a
+      >
+    </li>
+    {%- endif -%} {%- endfor -%}
+  </ul>
+</div>
