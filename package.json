@@ -38,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run stylelint && pretty-quick --staged --verbose && npm run uglify"
+      "pre-commit": "pretty-quick --staged && npm run stylelint && npm run uglify"
     }
   },
   "dependencies": {}
