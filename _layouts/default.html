@@ -18,6 +18,6 @@ layout: compress
     <script>
       document.body.classList.remove("no-js");
     </script>
-    <script src="{{site.baseurl}}/assets/navigation.js"></script>
+    {%-if site.header_pages-%}<script src="{{site.baseurl}}/assets/navigation.js"></script>{%-end if-%}
   </body>
 </html>
