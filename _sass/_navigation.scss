@@ -1,6 +1,6 @@
 .site-navigation {
   position: relative;
-  width: 100%;
+  width: 1.5rem;
 
   @include bp($mq-medium) {
     display: inline-block;
@@ -9,9 +9,10 @@
 }
 
 .site-menu-button {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0;
+  vertical-align: text-bottom;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -47,21 +48,13 @@
 
 .site-menu {
   position: absolute;
+  right: 0;
   display: block;
   width: 100%;
   min-width: 12rem;
-  margin-top: 1rem;
+  margin-top: 0.25rem;
   background: $color-barely;
   border-radius: 0.25rem;
-
-  @include bp-max($mq-medium) {
-    left: 0;
-  }
-
-  @include bp($mq-medium) {
-    right: 0;
-    width: auto;
-  }
 
   &[aria-hidden="true"] {
     display: none;

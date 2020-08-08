@@ -127,8 +127,24 @@
 
   .wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .site-title,
+  .site-navigation {
+    display: block;
+    max-width: 100%;
+  }
+  .site-title {
+    flex-grow: 1;
+    min-width: 0;
+  }
+  .site-title-inner {
+    display: flex;
+  }
+  .site-navigation,
+  .site-title-icon {
+    flex-shrink: 0;
   }
 
   :link,
@@ -138,9 +154,6 @@
 }
 
 .site-title {
-  display: block;
-  flex-shrink: 0;
-  max-width: 100%;
   font-weight: $font-weight-black;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
