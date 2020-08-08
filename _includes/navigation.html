@@ -1,4 +1,4 @@
-<div class="site-navigation">
+<div class="site-navigation" id="db-site-navigation">
   <button
     id="db-menu-button"
     class="site-menu-button"
@@ -27,7 +27,8 @@
 {%-if site.header_pages-%}
 <script>
   var menuButton = document.querySelector("#db-menu-button"),
-    menu = document.querySelector("#db-site-menu");
+    menu = document.querySelector("#db-site-menu"),
+    nav = document.querySelector("#db-site-navigation");
 
   if (menu && menuButton) {
     menuHide();
@@ -58,5 +59,11 @@
     menuHide();
   }
 }, true);
+
+document.addEventListener('click', function(event) {
+  if (!nav.contains(event.target)) {
+    menuHide();
+  }
+});
 </script>
 {%-endif-%}
