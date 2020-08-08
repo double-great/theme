@@ -15,7 +15,7 @@
     "path", path | first -%} {%- if my_page.title -%}
     <li>
       <a
-        class="page-link"
+        class="db-page-link"
         href="{{ my_page.url | relative_url }}"
         >{{ my_page.title | escape }}</a
       >
@@ -24,3 +24,39 @@
   </ul>
   </nav>
 </div>
+{%-if site.header_pages-%}
+<script>
+  var menuButton = document.querySelector("#db-menu-button"),
+    menu = document.querySelector("#db-site-menu");
+
+  if (menu && menuButton) {
+    menuHide();
+    menuButton.addEventListener("click", menuToggle, false);
+  }
+
+  function menuToggle(event) {
+    if (event.target.getAttribute("aria-expanded") == "false") {
+      menuShow();
+    } else {
+      menuHide();
+    }
+  }
+
+  function menuShow() {
+    menu.setAttribute("aria-hidden", "false");
+    menuButton.setAttribute("aria-expanded", "true");
+  }
+
+  function menuHide() {
+    menu.setAttribute("aria-hidden", "true");
+    menuButton.setAttribute("aria-expanded", "false");
+  }
+
+  document.addEventListener('focusin', function() {
+  const active = document.activeElement;
+  if (active.id !== 'db-menu-button' && active.className !== 'db-page-link') {
+    menuHide();
+  }
+}, true);
+</script>
+{%-endif-%}
