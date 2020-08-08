@@ -1,0 +1,27 @@
+<div class="site-navigation" id="db-site-navigation">
+  <button
+    id="db-menu-button"
+    class="site-menu-button"
+    aria-label="Toggle menu"
+    aria-controls="db-site-menu"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    {% include icon/menu.svg %}
+  </button>
+  <nav id="db-site-menu" aria-hidden="false" class="site-menu pre-js">
+  <ul>
+    {%- for path in page_paths -%} {%- assign my_page = site.pages | where:
+    "path", path | first -%} {%- if my_page.title -%}
+    <li>
+      <a
+        class="db-page-link"
+        href="{{ my_page.url | relative_url }}"
+        >{{ my_page.title | escape }}</a
+      >
+    </li>
+    {%- endif -%} {%- endfor -%}
+  </ul>
+  </nav>
+</div>
+<script src="{{site.baseurl}}/scripts/navigation.js"></script>

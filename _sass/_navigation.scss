@@ -1,0 +1,90 @@
+.site-navigation {
+  position: relative;
+  width: 1.5rem;
+
+  .no-js & {
+    margin-top: 1rem;
+  }
+
+  @include bp($mq-medium) {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.site-menu-button {
+  position: relative;
+  top: -0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none; // stylelint-disable-line
+
+  .no-js & {
+    display: none;
+  }
+
+  .pre-js {
+    left: -999em;
+    display: none;
+    opacity: 0;
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
+  }
+
+  &:hover {
+    svg {
+      stroke: $color-link;
+    }
+  }
+
+  &:focus {
+    color: $color-text-body;
+    text-decoration: none;
+    background-color: $color-highlight;
+    outline: $border-thick solid transparent;
+    outline-offset: 0;
+    box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
+  }
+}
+
+.site-menu {
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 100%;
+  min-width: 12rem;
+  margin-top: 0.25rem;
+  background: $color-barely;
+  border-radius: 0.25rem;
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  .no-js & {
+    position: relative;
+  }
+
+  .db-page-link {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-bottom: $border-thin solid $color-white;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+}
