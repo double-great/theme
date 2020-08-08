@@ -25,10 +25,11 @@ function menuHide() {
   menuButton.setAttribute("aria-expanded", "false");
 }
 
+// hide menu when focus is off of the menu button or page links
 document.addEventListener(
   "focusin",
   function () {
-    const active = document.activeElement;
+    var active = document.activeElement;
     if (active.id !== "db-menu-button" && active.className !== "db-page-link") {
       menuHide();
     }
@@ -36,8 +37,13 @@ document.addEventListener(
   true
 );
 
-document.addEventListener("click", function (event) {
-  if (!nav.contains(event.target)) {
-    menuHide();
-  }
-});
+// hiden menu when click is outside the navigation
+document.addEventListener(
+  "click",
+  function (event) {
+    if (!nav.contains(event.target)) {
+      menuHide();
+    }
+  },
+  true
+);
