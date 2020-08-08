@@ -31,13 +31,31 @@
 </footer>
 
 {%-if site.header_pages-%}
-<script type="text/javascript" src="{{site.baseurl}}/scripts/navigation.min.js"></script>
+<script>
+  var menuButton = document.querySelector("#db-menu-button"),
+    menu = document.querySelector("#db-site-menu");
 
-<script type="text/javascript">
-  window.onload = function () {
-    var menubutton = new Menubutton(document.getElementById("db-menu-button"));
-    document.getElementById("db-site-menu").setAttribute("aria-hidden", "true");
-    menubutton.init();
-  };
+  if (menu && menuButton) {
+    menuHide();
+    menuButton.addEventListener("click", menuToggle, false);
+  }
+
+  function menuToggle(event) {
+    if (event.target.getAttribute("aria-expanded") == "false") {
+      menuShow();
+    } else {
+      menuHide();
+    }
+  }
+
+  function menuShow() {
+    menu.setAttribute("aria-hidden", "false");
+    menuButton.setAttribute("aria-expanded", "true");
+  }
+
+  function menuHide() {
+    menu.setAttribute("aria-hidden", "true");
+    menuButton.setAttribute("aria-expanded", "false");
+  }
 </script>
-{%- endif -%}
+{%-endif-%}

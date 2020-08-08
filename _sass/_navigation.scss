@@ -1,39 +1,13 @@
 .site-navigation {
   position: relative;
+  width: 100%;
 
-  .pre-js {
-    left: -999em;
-    display: none;
-    opacity: 0;
+  @include bp($mq-medium) {
+    display: inline-block;
+    width: auto;
   }
 }
 
-ul[role="menu"] {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  display: block;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background-color: $color-barely;
-
-  &[aria-hidden="true"] {
-    display: none;
-  }
-}
-
-ul[role="menu"] li {
-  margin: 0;
-  padding: 0;
-}
-
-ul[role="menu"] a[role="menuitem"],
-ul[role="menu"] a[role="menuitem"]:visited {
-  display: block;
-  width: 15em;
-  padding: 0.5rem 1rem;
-}
 .site-menu-button {
   width: 1.75rem;
   height: 1.75rem;
@@ -42,6 +16,12 @@ ul[role="menu"] a[role="menuitem"]:visited {
   border: none;
   cursor: pointer;
   -webkit-appearance: none; // stylelint-disable-line
+
+  .pre-js {
+    left: -999em;
+    display: none;
+    opacity: 0;
+  }
 
   svg {
     width: 1.5rem;
@@ -62,5 +42,43 @@ ul[role="menu"] a[role="menuitem"]:visited {
     outline: $border-thick solid transparent;
     outline-offset: 0;
     box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
+  }
+}
+
+.site-menu {
+  position: absolute;
+  display: block;
+  width: 100%;
+  min-width: 12rem;
+  margin-top: 1rem;
+  background: $color-barely;
+  border-radius: 0.25rem;
+
+  @include bp-max($mq-medium) {
+    left: 0;
+  }
+
+  @include bp($mq-medium) {
+    right: 0;
+    width: auto;
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  .page-link {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-bottom: $border-thin solid $color-white;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
   }
 }
