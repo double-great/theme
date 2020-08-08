@@ -5,7 +5,7 @@ layout: compress
 <html lang="en">
   {%- include head.html -%}
 
-  <body class="page-{{page.layout | slugify}}">
+  <body class="page-{{page.layout | slugify}} no-js">
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
@@ -15,5 +15,8 @@ layout: compress
     </main>
 
     {%- include footer.html -%}
+    <script>
+      document.body.classList.remove("no-js");
+    </script>
   </body>
 </html>
