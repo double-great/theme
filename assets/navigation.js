@@ -25,25 +25,26 @@ function menuHide() {
   menuButton.setAttribute("aria-expanded", "false");
 }
 
+function triggerMenuHide(event) {
+  if (!nav.contains(event.target)) {
+    menuHide();
+  }
+}
+
 // hide menu when focus is off of the menu button or page links
 document.addEventListener(
   "focusin",
-  function () {
-    var active = document.activeElement;
-    if (active.id !== "db-menu-button" && active.className !== "db-page-link") {
-      menuHide();
-    }
+  function (event) {
+    triggerMenuHide(event);
   },
   true
 );
 
-// hiden menu when click is outside the navigation
+// hide menu when click is outside the navigation
 document.addEventListener(
   "click",
   function (event) {
-    if (!nav.contains(event.target)) {
-      menuHide();
-    }
+    triggerMenuHide(event);
   },
   true
 );
