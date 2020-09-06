@@ -14,4 +14,5 @@
     type="image/x-icon"
   />
   {%- feed_meta -%} {%- if site.custom_head %}{{site.custom_head}}{%- endif -%}
+  {%- if page.css -%}<style>{{page.css}}</style>{%- endif -%}
 </head>

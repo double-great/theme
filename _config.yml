@@ -11,8 +11,9 @@ github: double-great/great-great-jekyll-theme
 permalink: /:title/
 
 header_pages:
-  - post.md
+  - documentation.md
   - index.html
+  - post.md
 
 plugins:
   - jekyll-feed
