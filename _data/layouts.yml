@@ -8,11 +8,11 @@ home:
     - list_title: "sets an `h1` heading for the page."
     - show_date: "show the date with each post."
     - show_excerpts: "show the first paragraph with each post."
-    - list_type: "if set to `cards` all posts will use the `home/cards.html` include."
+    - list_type: "if set to `cards`, all posts will use the `home/cards.html` include."
 page:
   description: "A standard page with an `h1` title."
 
 post:
   description: "A standard post with an `h1` title and date."
   frontmatter:
-    - modified_date: "displays the date the page was modified."
+    - modified_date: "display the date the page was modified."
