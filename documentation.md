@@ -14,6 +14,19 @@ css: |
 
 Documentation for building sites with the Great Great Jekyll theme.
 
+## Site navigation
+
+To add items to the site navigation, add `header_pages` to `_config.yml`. The value is an array of filenames.
+
+Example:
+
+```yaml
+header_pages:
+  - index.html
+  - documentation.md
+  - demo/index.md
+```
+
 ## Layouts
 
 | Layout                                        | Description | Frontmatter               |
