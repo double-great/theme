@@ -24,6 +24,7 @@
 
 // Force word wrapping - useful for long URLs
 // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+
 // stylelint-disable plugin/no-unsupported-browser-features
 %u-word-wrap {
   word-wrap: break-word;
@@ -35,10 +36,11 @@
   -webkit-hyphens: auto; // stylelint-disable-line property-no-vendor-prefix
   hyphens: auto;
 }
-// stylelint-enable
+// stylelint-enable plugin/no-unsupported-browser-features
 
 // visually hide - still available to screen readers
 // https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+
 // stylelint-disable plugin/no-unsupported-browser-features
 %u-visually-hidden:not(:focus):not(:active),
 %u-visually-hidden--hide-focus {
@@ -53,4 +55,4 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
-// stylelint-enable
+// stylelint-enable plugin/no-unsupported-browser-features
