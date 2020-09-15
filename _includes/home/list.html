@@ -1,7 +1,7 @@
 <ul class="post-list">
   {%- for post in posts -%}
   <li>
-    {% if post.show_date %}<span class="post-meta"
+    {% if page.show_date %}<span class="post-meta"
       >{{ post.date | date: "%b %-d, %Y" }}</span
     >{% endif %}
     <h2>
@@ -9,7 +9,7 @@
         {{ post.title | escape }}
       </a>
     </h2>
-    {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+    {%- if page.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
   </li>
   {%- endfor -%}
 </ul>
