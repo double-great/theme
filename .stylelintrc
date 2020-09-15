@@ -126,7 +126,7 @@
     "string-quotes": "double",
     "unit-no-unknown": true,
     "unit-case": "lower",
-    "unit-whitelist": ["em", "rem", "%", "s", "ch", "vh", "vw", "deg", "fr", "ms"],
+    "unit-allowed-list": ["em", "rem", "%", "s", "ch", "vh", "vw", "deg", "fr", "ms"],
     "value-list-comma-newline-after": null,
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
