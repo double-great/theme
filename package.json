@@ -6,9 +6,11 @@
   "scripts": {
     "test": "npm run lint",
     "pretty-quick": "pretty-quick",
-    "stylelint": "stylelint  \"_sass/**/*.scss\" --fix && npm run tokenize",
+    "stylelint": "npm run browser-list && stylelint  \"_sass/**/*.scss\" --fix && npm run tokenize",
     "lint": "npm run pretty-quick && npm run stylelint",
-    "tokenize": "scss-to-json \"_sass/_variables.scss\" > \"_data/variables.json\""
+    "tokenize": "scss-to-json \"_sass/_variables.scss\" > \"_data/variables.json\"",
+    "browser-list": "echo Browser support list: && npx browserslist",
+    "browser-update": "npx browserslist@latest --update-db"
   },
   "repository": {
     "type": "git",
@@ -22,10 +24,10 @@
   "homepage": "https://github.com/double-great/great-great-jekyll-theme#readme",
   "devDependencies": {
     "husky": "^4.3.0",
-    "prettier": "^2.1.1",
+    "prettier": "^2.1.2",
     "pretty-quick": "^3.0.2",
     "scss-to-json": "^2.0.0",
-    "stylelint": "^13.7.1",
+    "stylelint": "^13.7.2",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^20.0.0",

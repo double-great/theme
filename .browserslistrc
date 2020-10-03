@@ -1,0 +1,4 @@
+# Browsers that we support
+# run `npx browserslist` in this directory to see list
+
+defaults and > .5% in US, IE 11

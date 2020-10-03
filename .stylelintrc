@@ -144,7 +144,6 @@
 
     "plugin/no-unsupported-browser-features": [true, {
       "severity": "warning",
-      "browsers": ["> .5% in US and last 2 version"],
       "ignore": [
         "calc",
         "css-featurequeries",
