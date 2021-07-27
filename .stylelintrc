@@ -1,14 +1,9 @@
 {
-  "extends": [
-    "stylelint-config-rational-order"
-  ],
   "plugins": [
     "stylelint-a11y",
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-no-unsupported-browser-features",
-    "stylelint-scss",
-    "stylelint-order",
-    "stylelint-config-rational-order/plugin"
+    "stylelint-scss"
   ],
   "rules": {
     "at-rule-empty-line-before": ["always", "except": ["blockless-after-same-name-blockless", "blockless-after-blockless", "first-nested"]],
@@ -165,12 +160,6 @@
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/operator-no-unspaced": true,
     "scss/partial-no-import": true,
-    "scss/selector-no-redundant-nesting-selector": true,
-
-    "order/properties-order": [],
-    "plugin/rational-order": [true, {
-      "border-in-box-model": false,
-      "empty-line-between-groups": false,
-    }]
+    "scss/selector-no-redundant-nesting-selector": true
   }
 }
