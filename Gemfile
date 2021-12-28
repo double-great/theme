@@ -3,6 +3,7 @@ gemspec
 
 # Use GitHub Pages gem and allowed plugins
 gem "github-pages"  , group: :jekyll_plugins
+gem "webrick"
 
 # If you want to use canonical Jekyll and specific plugins,
 # remove the "gem "github-pages"" line above and uncomment

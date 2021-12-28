@@ -2,21 +2,18 @@ $font-body-webfont: "Inter";
 $font-body-fallback: "Helvetica", "Arial";
 $font-body-default: sans-serif;
 $font-body: $font-body-webfont, $font-body-fallback, $font-body-default;
-
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-weight-black: 900;
-
 $border-thin: 0.0625rem; // 1px
 $border-thick: 0.1875rem; // 3px
 
 // Colors
 $color-medium: #1e69cd;
 $color-darkest: #203851;
-$color-highlight: #ffdd00;
-
+$color-highlight: #fd0;
 $color-link: $color-medium;
 $color-link-hover: $color-darkest;
 
@@ -27,7 +24,6 @@ $color-border: #cbcbcb;
 $color-text-accent: #757575;
 $color-text-body: #333;
 $color-text-heading: #222;
-
 $mq-smallest: 20em; // 320px
 $mq-small: 40em; // 640px
 $mq-medium: 50em; // 800px
@@ -35,7 +31,6 @@ $mq-large: 70em; // 1120px
 
 $content-max-width: $mq-small;
 $content-line-length: 70ch;
-
 $line-height-reset: 1;
 $line-height-heading: 1.2;
 $line-height-text: 1.5;
