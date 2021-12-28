@@ -1,4 +1,5 @@
 {
+  "extends": ["stylelint-config-standard-scss"],
   "plugins": [
     "stylelint-a11y",
     "stylelint-declaration-block-no-ignored-properties",
@@ -6,18 +7,24 @@
     "stylelint-scss"
   ],
   "rules": {
-    "at-rule-empty-line-before": ["always", "except": ["blockless-after-same-name-blockless", "blockless-after-blockless", "first-nested"]],
+    "alpha-value-notation": null,
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "blockless-after-same-name-blockless",
+          "blockless-after-blockless",
+          "first-nested"
+        ]
+      }
+    ],
     "at-rule-name-case": "lower",
     "at-rule-name-newline-after": null,
     "at-rule-name-space-after": "always-single-line",
-    "at-rule-no-unknown": [ true, {
-      "ignoreAtRules": [
-        "extend",
-        "include",
-        "mixin",
-        "content"
-      ]
-    }],
+    "at-rule-no-unknown": [
+      true,
+      { "ignoreAtRules": ["extend", "include", "mixin", "content"] }
+    ],
     "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-newline-after": "always",
     "at-rule-semicolon-space-before": "never",
@@ -32,6 +39,7 @@
     "block-opening-brace-space-after": "always-single-line",
     "block-opening-brace-space-before": "always",
     "color-hex-case": "lower",
+    "color-function-notation": null,
     "color-named": "never",
     "color-no-invalid-hex": true,
     "comment-empty-line-before": "always",
@@ -88,6 +96,7 @@
     "no-invalid-double-slash-comments": true,
     "no-unknown-animations": true,
     "number-leading-zero": "always",
+    "number-max-precision": null,
     "number-no-trailing-zeros": true,
     "property-case": "lower",
     "property-no-unknown": true,
@@ -95,8 +104,10 @@
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
+    "selector-class-pattern": null,
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
+    "selector-id-pattern": null,
     "selector-list-comma-space-before": "never",
     "selector-max-attribute": 2,
     "selector-max-class": 4,
@@ -108,7 +119,7 @@
     "selector-max-specificity": "0,4,2",
     "selector-max-type": 3,
     "selector-max-universal": 2,
-    "selector-no-qualifying-type": [true, { ignore: ["attribute"] }],
+    "selector-no-qualifying-type": [true, { "ignore": ["attribute"] }],
     "selector-no-vendor-prefix": true,
     "selector-pseudo-class-case": "lower",
     "selector-pseudo-class-no-unknown": true,
@@ -121,7 +132,19 @@
     "string-quotes": "double",
     "unit-no-unknown": true,
     "unit-case": "lower",
-    "unit-allowed-list": ["em", "rem", "%", "s", "ch", "vh", "vw", "deg", "fr", "ms"],
+    "unit-allowed-list": [
+      "em",
+      "rem",
+      "%",
+      "s",
+      "ms",
+      "ch",
+      "vh",
+      "vw",
+      "deg",
+      "fr"
+    ],
+    "value-keyword-case": null,
     "value-list-comma-newline-after": null,
     "value-list-comma-space-after": "always-single-line",
     "value-list-comma-space-before": "never",
@@ -137,20 +160,24 @@
 
     "plugin/declaration-block-no-ignored-properties": true,
 
-    "plugin/no-unsupported-browser-features": [true, {
-      "severity": "warning",
-      "ignore": [
-        "calc",
-        "css-featurequeries",
-        "css-gradients",
-        "flexbox",
-        "multicolumn",
-        "outline",
-        "viewport-units"
-      ]
-    }],
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "severity": "warning",
+        "ignore": [
+          "calc",
+          "css-featurequeries",
+          "css-gradients",
+          "flexbox",
+          "multicolumn",
+          "outline",
+          "viewport-units"
+        ]
+      }
+    ],
 
     "scss/at-extend-no-missing-placeholder": [true, { "severity": "warning" }],
+    "scss/at-mixin-pattern": null,
     "scss/at-import-no-partial-leading-underscore": true,
     "scss/comment-no-loud": true,
     "scss/declaration-nested-properties": "never",
@@ -158,8 +185,10 @@
     "scss/dollar-variable-colon-space-before": "never",
     "scss/dollar-variable-no-missing-interpolation": true,
     "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/no-global-function-names": null,
     "scss/operator-no-unspaced": true,
     "scss/partial-no-import": true,
+    "scss/percent-placeholder-pattern": null,
     "scss/selector-no-redundant-nesting-selector": true
   }
 }
