@@ -4,7 +4,7 @@
   "description": "Jekyll theme for doublegreat.dev",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "bundle exec jekyll build && npm run stylelint",
     "pretty-quick": "pretty-quick",
     "stylelint": "npm run browser-list && stylelint  \"_sass/**/*.scss\" --fix && npm run tokenize",
     "lint": "npm run pretty-quick && npm run stylelint",
