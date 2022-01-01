@@ -1,6 +1,6 @@
 {
   "name": "great-great-jekyll-theme",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Jekyll theme for doublegreat.dev",
   "main": "index.js",
   "scripts": {
