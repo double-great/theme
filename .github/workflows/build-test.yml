@@ -16,7 +16,7 @@ jobs:
           ruby-version: "3.0"
           bundler-cache: true
       - name: Set up Node.js 16.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: "npm"
