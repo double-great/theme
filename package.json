@@ -1,6 +1,6 @@
 {
-  "name": "great-great-jekyll-theme",
-  "version": "1.0.0",
+  "name": "theme",
+  "version": "2.0.0",
   "description": "Jekyll theme for doublegreat.dev",
   "main": "index.js",
   "scripts": {
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/double-great/great-great-jekyll-theme.git"
+    "url": "git+https://github.com/double-great/theme.git"
   },
   "author": "Double Great",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/double-great/great-great-jekyll-theme/issues"
+    "url": "https://github.com/double-great/theme/issues"
   },
-  "homepage": "https://github.com/double-great/great-great-jekyll-theme#readme",
+  "homepage": "https://github.com/double-great/theme#readme",
   "devDependencies": {
     "@crocsx/scss-to-json": "^3.0.0",
     "husky": "^7.0.4",

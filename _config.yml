@@ -1,12 +1,12 @@
 title: Great Great Jekyll Theme
 description: "Jekyll theme for Double Great projects."
 url: "https://doublegreat.dev"
-baseurl: /great-great-jekyll-theme
+baseurl: /theme
 
 author:
   name: "@double-great"
 
-github: double-great/great-great-jekyll-theme
+github: double-great/theme
 
 permalink: /:title/
 

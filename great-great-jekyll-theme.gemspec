@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "great-great-jekyll-theme"
-  spec.version       = "1.0.0"
+  spec.version       = "2.0.0"
   spec.authors       = ["Double Great"]
 
   spec.summary       = "Jekyll theme for doublegreat.dev"
