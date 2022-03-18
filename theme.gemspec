@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "great-great-jekyll-theme"
+  spec.name          = "theme"
   spec.version       = "2.0.0"
   spec.authors       = ["Double Great"]
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    great-great-jekyll-theme (2.0.0)
+    theme (2.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -287,8 +287,8 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  great-great-jekyll-theme!
   rake (~> 12.0)
+  theme!
   webrick
 
 BUNDLED WITH
