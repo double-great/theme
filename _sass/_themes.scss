@@ -1,6 +1,6 @@
 :root {
   // UI
-  --color-darkest: #{$color-darkest};
+  --color-background-secondary: #{$color-background-secondary};
   --color-highlight: #{$color-highlight};
   --color-background: #{$color-background};
   --color-background-tertiary: #{$color-background-tertiary};
@@ -16,8 +16,8 @@
 
   // Interactive: links and buttons
   --color-link: var(--color-link);
-  --color-link-hover: var(--color-darkest);
+  --color-link-hover: var(--color-background-secondary);
   --color-button: #{$color-background};
   --color-button-text: var(--color-link);
-  --color-button-hover: var(--color-darkest);
+  --color-button-hover: var(--color-background-secondary);
 }
