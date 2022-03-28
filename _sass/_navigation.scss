@@ -41,14 +41,14 @@
 
   &:hover {
     svg {
-      stroke: $color-link;
+      stroke: var(--color-link);
     }
   }
 
   &:focus {
-    color: $color-text-body;
+    color: var(--color-text-body);
     text-decoration: none;
-    background-color: $color-highlight;
+    background-color: var(--color-highlight);
     outline: $border-thick solid transparent;
     outline-offset: 0;
     box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
@@ -62,7 +62,7 @@
   width: 100%;
   min-width: 12rem;
   margin-top: 0.25rem;
-  background: $color-barely;
+  background: var(--color-barely);
   border-radius: 0.25rem;
 
   &[aria-hidden="true"] {

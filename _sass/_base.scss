@@ -17,17 +17,17 @@
 }
 
 html {
-  background: $color-darkest;
+  background: var(--color-darkest);
   scroll-padding-top: 5rem;
 }
 
 body {
   margin: 0;
-  color: $color-text-body;
+  color: var(--color-text-body);
   font-size: 112.5%; // 18px
   font-family: $font-body;
   line-height: 1.5;
-  background-color: $color-white;
+  background-color: var(--color-white);
 }
 
 a {
@@ -35,7 +35,7 @@ a {
 
   &:link,
   &:visited {
-    color: $color-link;
+    color: var(--color-link);
     text-decoration: underline;
   }
 
@@ -45,13 +45,13 @@ a {
   }
 
   &:hover {
-    color: $color-link-hover;
+    color: var(--color-link-hover);
   }
 
   &:focus {
-    color: $color-text-body;
+    color: var(--color-text-body);
     text-decoration: none;
-    background-color: $color-highlight;
+    background-color: var(--color-highlight);
     outline: $border-thick solid transparent;
     outline-offset: 0;
     box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
@@ -64,9 +64,9 @@ a {
 }
 
 :target {
-  color: $color-text-body;
+  color: var(--color-text-body);
   text-decoration: none;
-  background-color: $color-highlight;
+  background-color: var(--color-highlight);
   outline: $border-thick solid transparent;
   outline-offset: 0;
   box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
@@ -85,7 +85,7 @@ h5,
 h6,
 %h6 {
   margin-bottom: 1rem;
-  color: $color-text-heading;
+  color: var(--color-text-heading);
   font-weight: $font-weight-bold;
   font-family: $font-body;
   line-height: $line-height-heading;
@@ -176,13 +176,13 @@ pre {
   margin-bottom: 0.5rem;
   padding: 0.5rem 0.75rem;
   white-space: pre-wrap;
-  background-color: $color-barely;
+  background-color: var(--color-barely);
   border-radius: 0.25rem;
 }
 
 code {
   padding: 0.15rem 0.25rem;
-  background-color: $color-barely;
+  background-color: var(--color-barely);
   border-radius: 0.25rem;
 }
 
@@ -227,7 +227,7 @@ kbd {
   display: inline-block;
   padding: 0 0.25rem;
   white-space: nowrap;
-  background-color: $color-barely;
+  background-color: var(--color-barely);
   border: $border-thin solid $color-border;
   border-radius: 0.25rem;
 }
@@ -246,6 +246,6 @@ table {
 
   th {
     text-align: left;
-    background: $color-barely;
+    background: var(--color-barely);
   }
 }
