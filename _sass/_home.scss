@@ -52,7 +52,7 @@
   margin: 0;
   object-fit: cover; // stylelint-disable-line plugin/no-unsupported-browser-features
   object-position: bottom center; // stylelint-disable-line plugin/no-unsupported-browser-features
-  border-bottom: $border-thin solid var(--color-background-accent);
+  border-bottom: $border-thin solid var(--color-background-tertiary);
   border-radius: 0.25rem 0.25rem 0 0;
 }
 
