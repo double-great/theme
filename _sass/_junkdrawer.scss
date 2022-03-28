@@ -30,12 +30,9 @@
   }
 
   &:focus {
-    color: var(--color-text-body);
-    text-decoration: none;
-    background-color: var(--color-highlight);
+    @include focus;
+
     border: $border-thick solid var(--color-text-body);
-    outline: $border-thick solid transparent;
-    outline-offset: 0;
     box-shadow: 0;
   }
 }
@@ -88,13 +85,7 @@
     }
 
     &:focus {
-      color: var(--color-text-body);
-      text-decoration: none;
-      background-color: var(--color-highlight);
-      outline: $border-thick solid transparent;
-      outline-offset: 0;
-      box-shadow: 0 -0.125rem var(--color-highlight),
-        0 0.25rem var(--color-text-body);
+      @include focus-with-shadow;
 
       .svg-icon {
         color: var(--color-text-body);

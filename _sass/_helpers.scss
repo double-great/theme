@@ -56,3 +56,18 @@
   clip-path: inset(100%);
 }
 // stylelint-enable plugin/no-unsupported-browser-features
+
+@mixin focus {
+  color: var(--color-text-body);
+  text-decoration: none;
+  background-color: var(--color-highlight);
+  outline: $border-thick solid transparent;
+  outline-offset: 0;
+}
+
+@mixin focus-with-shadow {
+  @include focus;
+
+  box-shadow: 0 -0.125rem var(--color-highlight),
+    0 0.25rem var(--color-text-body);
+}
