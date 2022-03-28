@@ -1,13 +1,15 @@
 :root {
-  // UI
-  --color-background-secondary: #{$color-background-secondary};
-  --color-highlight: #{$color-highlight};
+  // Background
   --color-background: #{$color-background};
+  --color-background-secondary: #{$color-background-secondary};
   --color-background-tertiary: #{$color-background-tertiary};
+
+  // UI
+  --color-highlight: #{$color-highlight};
   --color-border: #{$color-border};
   --color-transparent: transparent;
-  --color-black-01: rgba(0, 0, 0, 0.1);
-  --color-black-05: rgba(0, 0, 0, 0.05);
+  --color-shadow-primary: rgba(0, 0, 0, 0.1);
+  --color-shadow-secondary: rgba(0, 0, 0, 0.05);
 
   // Text
   --color-text-accent: #{$color-text-accent};
