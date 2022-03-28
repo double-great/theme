@@ -14,7 +14,7 @@
   background-color: var(--color-link);
   border: $border-thick solid var(--color-link);
   border-radius: 0.5rem;
-  box-shadow: 0;
+  box-shadow: none;
 
   &:link,
   &:visited {
@@ -36,7 +36,7 @@
     border: $border-thick solid var(--color-text-body);
     outline: $border-thick solid transparent;
     outline-offset: 0;
-    box-shadow: 0;
+    box-shadow: none;
   }
 }
 
