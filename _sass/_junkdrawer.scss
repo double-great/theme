@@ -6,44 +6,44 @@
   display: inline-block;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: var(--color-white);
   font-size: 1rem;
   white-space: nowrap;
   text-decoration: none;
   vertical-align: middle;
-  background-color: $color-link;
-  border: $border-thick solid $color-link;
+  background-color: var(--color-link);
+  border: $border-thick solid var(--color-link);
   border-radius: 0.5rem;
   box-shadow: 0;
 
   &:link,
   &:visited {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
   }
 
   &:hover,
   &:focus {
     text-decoration: none;
-    background-color: $color-link-hover;
-    border-color: $color-link-hover;
+    background-color: var(--color-link-hover);
+    border-color: var(--color-link-hover);
   }
 
   &:focus {
-    color: $color-text-body;
+    color: var(--color-text-body);
     text-decoration: none;
-    background-color: $color-highlight;
-    border: $border-thick solid $color-text-body;
+    background-color: var(--color-highlight);
+    border: $border-thick solid var(--color-text-body);
     outline: $border-thick solid transparent;
     outline-offset: 0;
-    box-shadow: none;
+    box-shadow: 0;
   }
 }
 
 .svg-icon {
   width: 1rem;
   height: 1rem;
-  color: $color-text-accent;
+  color: var(--color-text-accent);
 }
 
 .skip {
@@ -65,38 +65,39 @@
   margin-top: 3rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: $color-barely;
-  background-color: $color-darkest;
+  color: var(--color-barely);
+  background-color: var(--color-darkest);
 
   .svg-icon {
-    color: $color-border;
+    color: var(--color-border);
   }
 
   a {
     &:link,
     &:visited {
-      color: $color-border;
+      color: var(--color-border);
       text-decoration: none;
     }
 
     &:hover {
-      color: #fff;
+      color: var(--color-white);
 
       .svg-icon {
-        color: #fff;
+        color: var(--color-white);
       }
     }
 
     &:focus {
-      color: $color-text-body;
+      color: var(--color-text-body);
       text-decoration: none;
-      background-color: $color-highlight;
+      background-color: var(--color-highlight);
       outline: $border-thick solid transparent;
       outline-offset: 0;
-      box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
+      box-shadow: 0 -0.125rem var(--color-highlight),
+        0 0.25rem var(--color-text-body);
 
       .svg-icon {
-        color: $color-text-body;
+        color: var(--color-text-body);
       }
     }
   }
@@ -169,13 +170,13 @@
 
   &:hover {
     .site-title-icon {
-      background-color: $color-link-hover;
+      background-color: var(--color-link-hover);
     }
   }
 
   &:focus {
     .site-title-icon {
-      background-color: $color-text-body;
+      background-color: var(--color-text-body);
     }
   }
 }
@@ -189,13 +190,13 @@
   margin-right: 0.5rem;
   text-align: center;
   vertical-align: middle;
-  background-color: $color-link;
+  background-color: var(--color-link);
   border-radius: 100%;
 
   svg {
     width: 1.25rem;
     height: 1.25rem;
-    color: $color-barely;
+    color: var(--color-barely);
   }
 }
 
@@ -205,7 +206,7 @@
 
   .post-meta {
     margin-bottom: 0.25rem;
-    color: $color-text-accent;
+    color: var(--color-text-accent);
   }
 }
 
@@ -265,7 +266,7 @@
 %u-line-height {
   display: block;
   text-align: center;
-  background-color: $color-barely;
+  background-color: var(--color-barely);
 }
 
 .u-line-height-reset {
@@ -289,17 +290,17 @@
 %u-border {
   display: inline-block;
   padding: 0.5rem;
-  border: $border-thin solid $color-border;
+  border: $border-thin solid var(--color-border);
 }
 
 .u-border-thin {
   @extend %u-border;
 
-  border: $border-thin solid $color-border;
+  border: $border-thin solid var(--color-border);
 }
 
 .u-border-thick {
   @extend %u-border;
 
-  border: $border-thick solid $color-border;
+  border: $border-thick solid var(--color-border);
 }

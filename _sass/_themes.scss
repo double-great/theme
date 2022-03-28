@@ -1,0 +1,16 @@
+:root {
+  --color-medium: #{$color-medium};
+  --color-darkest: #{$color-darkest};
+  --color-highlight: #{$color-highlight};
+  --color-link: var(--color-medium);
+  --color-link-hover: var(--color-darkest);
+  --color-white: #{$color-white};
+  --color-barely: #{$color-barely};
+  --color-border: #{$color-border};
+  --color-text-accent: #{$color-text-accent};
+  --color-text-body: #{$color-text-body};
+  --color-text-heading: #{$color-text-heading};
+  --color-transparent: transparent;
+  --color-black-01: rgba(0, 0, 0, 0.1);
+  --color-black-05: rgba(0, 0, 0, 0.05);
+}
