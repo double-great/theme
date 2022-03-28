@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "stylelint-config-prettier",
-    "stylelint-config-standard-scss"
-  ],
+  "extends": ["stylelint-config-prettier", "stylelint-config-standard-scss"],
   "plugins": [
     "stylelint-a11y",
     "stylelint-declaration-block-no-ignored-properties",
@@ -192,6 +189,9 @@
     "scss/operator-no-unspaced": true,
     "scss/partial-no-import": true,
     "scss/percent-placeholder-pattern": null,
-    "scss/selector-no-redundant-nesting-selector": true
+    "scss/selector-no-redundant-nesting-selector": true,
+    "declaration-property-value-allowed-list": {
+      "/background$|color$|background-color$|border-color$|stroke/": "/^var\\(--color-/"
+    }
   }
 }
