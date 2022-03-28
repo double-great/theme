@@ -19,7 +19,7 @@
   height: 1.5rem;
   padding: 0;
   background: var(--color-transparent);
-  border: none;
+  border: 0;
   cursor: pointer;
   -webkit-appearance: none; // stylelint-disable-line
 
@@ -78,7 +78,7 @@
     display: block;
     width: 100%;
     padding: 0.5rem 1rem;
-    border-bottom: $border-thin solid $color-white;
+    border-bottom: $border-thin solid var(--color-white);
 
     &:last-child {
       border-bottom: 0;

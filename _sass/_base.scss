@@ -212,7 +212,7 @@ hr {
   padding: 0;
   overflow: visible;
   border: 0;
-  border-top: $border-thick solid $color-border;
+  border-top: $border-thick solid var(--color-border);
 }
 
 img,
@@ -230,7 +230,7 @@ kbd {
   padding: 0 0.25rem;
   white-space: nowrap;
   background-color: var(--color-barely);
-  border: $border-thin solid $color-border;
+  border: $border-thin solid var(--color-border);
   border-radius: 0.25rem;
 }
 
@@ -243,7 +243,7 @@ table {
   td {
     padding: 0.5rem 1rem;
     word-break: break-word;
-    border: $border-thin solid $color-border;
+    border: $border-thin solid var(--color-border);
   }
 
   th {

@@ -33,7 +33,7 @@
     color: var(--color-text-body);
     text-decoration: none;
     background-color: var(--color-highlight);
-    border: $border-thick solid $color-text-body;
+    border: $border-thick solid var(--color-text-body);
     outline: $border-thick solid transparent;
     outline-offset: 0;
     box-shadow: 0;
@@ -290,17 +290,17 @@
 %u-border {
   display: inline-block;
   padding: 0.5rem;
-  border: $border-thin solid $color-border;
+  border: $border-thin solid var(--color-border);
 }
 
 .u-border-thin {
   @extend %u-border;
 
-  border: $border-thin solid $color-border;
+  border: $border-thin solid var(--color-border);
 }
 
 .u-border-thick {
   @extend %u-border;
 
-  border: $border-thick solid $color-border;
+  border: $border-thick solid var(--color-border);
 }

@@ -192,7 +192,7 @@
     "scss/selector-no-redundant-nesting-selector": true,
     "declaration-property-value-allowed-list": {
       "/background$|color$|background-color$|border-color$|stroke/": "/^var\\(--color-/",
-      "box-shadow": "/var\\(--color-|^0$/"
+      "/box-shadow|^border$|^border-(top|right|bottom|left)/": "/var\\(--color-|^0$/"
     }
   }
 }
