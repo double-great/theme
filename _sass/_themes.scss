@@ -4,7 +4,7 @@
   --color-highlight: #{$color-highlight};
   --color-link: var(--color-medium);
   --color-link-hover: var(--color-darkest);
-  --color-white: #{$color-white};
+  --color-background: #{$color-background};
   --color-barely: #{$color-barely};
   --color-border: #{$color-border};
   --color-text-accent: #{$color-text-accent};
@@ -13,4 +13,7 @@
   --color-transparent: transparent;
   --color-black-01: rgba(0, 0, 0, 0.1);
   --color-black-05: rgba(0, 0, 0, 0.05);
+  --color-button: #{$color-background};
+  --color-button-text: var(--color-medium);
+  --color-button-hover: var(--color-darkest);
 }

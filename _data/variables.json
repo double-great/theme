@@ -15,7 +15,7 @@
   "$color-highlight": "#fd0",
   "$color-link": "#1e69cd",
   "$color-link-hover": "#203851",
-  "$color-white": "#fff",
+  "$color-background": "#fff",
   "$color-barely": "#f0f0f0",
   "$color-border": "#cbcbcb",
   "$color-text-accent": "#757575",
