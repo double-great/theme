@@ -19,7 +19,7 @@
   // Interactive
   --color-link: #{$color-link};
   --color-link-hover: var(--color-background-secondary);
-  --color-button: #{$color-background};
+  --color-button: var(--color-background);
   --color-button-text: var(--color-link);
   --color-button-hover: var(--color-background-secondary);
 }
