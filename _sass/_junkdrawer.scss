@@ -62,7 +62,7 @@
   margin-top: 3rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: var(--color-barely);
+  color: var(--color-background-accent);
   background-color: var(--color-darkest);
 
   .svg-icon {
@@ -187,7 +187,7 @@
   svg {
     width: 1.25rem;
     height: 1.25rem;
-    color: var(--color-barely);
+    color: var(--color-background-accent);
   }
 }
 
@@ -257,7 +257,7 @@
 %u-line-height {
   display: block;
   text-align: center;
-  background-color: var(--color-barely);
+  background-color: var(--color-background-accent);
 }
 
 .u-line-height-reset {
