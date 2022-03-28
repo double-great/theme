@@ -14,7 +14,7 @@
   background-color: var(--color-button-text);
   border: $border-thick solid var(--color-button-text);
   border-radius: 0.5rem;
-  box-shadow: 0;
+  box-shadow: none;
 
   &:link,
   &:visited {
@@ -33,7 +33,7 @@
     @include focus;
 
     border: $border-thick solid var(--color-text-body);
-    box-shadow: 0;
+    box-shadow: none;
   }
 }
 
