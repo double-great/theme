@@ -6,36 +6,33 @@
   display: inline-block;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
-  color: var(--color-white);
+  color: var(--color-button);
   font-size: 1rem;
   white-space: nowrap;
   text-decoration: none;
   vertical-align: middle;
-  background-color: var(--color-link);
-  border: $border-thick solid var(--color-link);
+  background-color: var(--color-button-text);
+  border: $border-thick solid var(--color-button-text);
   border-radius: 0.5rem;
   box-shadow: none;
 
   &:link,
   &:visited {
-    color: var(--color-white);
+    color: var(--color-button);
     text-decoration: none;
   }
 
   &:hover,
   &:focus {
     text-decoration: none;
-    background-color: var(--color-link-hover);
-    border-color: var(--color-link-hover);
+    background-color: var(--color-button-hover);
+    border-color: var(--color-button-hover);
   }
 
   &:focus {
-    color: var(--color-text-body);
-    text-decoration: none;
-    background-color: var(--color-highlight);
+    @include focus;
+
     border: $border-thick solid var(--color-text-body);
-    outline: $border-thick solid transparent;
-    outline-offset: 0;
     box-shadow: none;
   }
 }
@@ -65,8 +62,8 @@
   margin-top: 3rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: var(--color-barely);
-  background-color: var(--color-darkest);
+  color: var(--color-background-tertiary);
+  background-color: var(--color-background-secondary);
 
   .svg-icon {
     color: var(--color-border);
@@ -80,21 +77,15 @@
     }
 
     &:hover {
-      color: var(--color-white);
+      color: var(--color-background);
 
       .svg-icon {
-        color: var(--color-white);
+        color: var(--color-background);
       }
     }
 
     &:focus {
-      color: var(--color-text-body);
-      text-decoration: none;
-      background-color: var(--color-highlight);
-      outline: $border-thick solid transparent;
-      outline-offset: 0;
-      box-shadow: 0 -0.125rem var(--color-highlight),
-        0 0.25rem var(--color-text-body);
+      @include focus-with-shadow;
 
       .svg-icon {
         color: var(--color-text-body);
@@ -196,7 +187,7 @@
   svg {
     width: 1.25rem;
     height: 1.25rem;
-    color: var(--color-barely);
+    color: var(--color-background-tertiary);
   }
 }
 
@@ -266,7 +257,7 @@
 %u-line-height {
   display: block;
   text-align: center;
-  background-color: var(--color-barely);
+  background-color: var(--color-background-tertiary);
 }
 
 .u-line-height-reset {

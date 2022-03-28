@@ -1,16 +1,25 @@
 :root {
-  --color-medium: #{$color-medium};
-  --color-darkest: #{$color-darkest};
+  // Background
+  --color-background: #{$color-background};
+  --color-background-secondary: #{$color-background-secondary};
+  --color-background-tertiary: #{$color-background-tertiary};
+
+  // UI
   --color-highlight: #{$color-highlight};
-  --color-link: var(--color-medium);
-  --color-link-hover: var(--color-darkest);
-  --color-white: #{$color-white};
-  --color-barely: #{$color-barely};
   --color-border: #{$color-border};
+  --color-transparent: transparent;
+  --color-shadow-primary: rgba(0, 0, 0, 0.1);
+  --color-shadow-secondary: rgba(0, 0, 0, 0.05);
+
+  // Text
   --color-text-accent: #{$color-text-accent};
   --color-text-body: #{$color-text-body};
   --color-text-heading: #{$color-text-heading};
-  --color-transparent: transparent;
-  --color-black-01: rgba(0, 0, 0, 0.1);
-  --color-black-05: rgba(0, 0, 0, 0.05);
+
+  // Interactive
+  --color-link: #{$color-link};
+  --color-link-hover: var(--color-background-secondary);
+  --color-button: var(--color-background);
+  --color-button-text: var(--color-link);
+  --color-button-hover: var(--color-background-secondary);
 }
