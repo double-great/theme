@@ -36,8 +36,8 @@
 .post-list-card {
   display: block;
   border-radius: 0.25rem;
-  box-shadow: 0 0.75rem 1rem -0.25rem rgba(0, 0, 0, 0.1),
-    0 0.25rem 0.5rem -0.1rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.75rem 1rem -0.25rem var(--color-black-01),
+    0 0.25rem 0.5rem -0.1rem var(--color-black-05);
 
   &:link,
   &:visited {

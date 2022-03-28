@@ -191,7 +191,8 @@
     "scss/percent-placeholder-pattern": null,
     "scss/selector-no-redundant-nesting-selector": true,
     "declaration-property-value-allowed-list": {
-      "/background$|color$|background-color$|border-color$|stroke/": "/^var\\(--color-/"
+      "/background$|color$|background-color$|border-color$|stroke/": "/^var\\(--color-/",
+      "box-shadow": "/var\\(--color-|^0$/"
     }
   }
 }

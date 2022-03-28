@@ -54,7 +54,8 @@ a {
     background-color: var(--color-highlight);
     outline: $border-thick solid transparent;
     outline-offset: 0;
-    box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
+    box-shadow: 0 -0.125rem var(--color-highlight),
+      0 0.25rem var(--color-text-body);
   }
 
   // subtle, visible "click"
@@ -69,7 +70,8 @@ a {
   background-color: var(--color-highlight);
   outline: $border-thick solid transparent;
   outline-offset: 0;
-  box-shadow: 0 -0.125rem $color-highlight, 0 0.25rem $color-text-body;
+  box-shadow: 0 -0.125rem var(--color-highlight),
+    0 0.25rem var(--color-text-body);
 }
 
 h1,
