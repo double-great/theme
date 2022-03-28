@@ -10,18 +10,22 @@ $font-weight-black: 900;
 $border-thin: 0.0625rem; // 1px
 $border-thick: 0.1875rem; // 3px
 
-// Colors
-$color-link: #1e69cd;
-$color-background-secondary: #203851;
-$color-highlight: #fd0;
-
-// Grayscale
+// Background
 $color-background: #fff;
+$color-background-secondary: #203851;
 $color-background-tertiary: #f0f0f0;
+
+// UI
+$color-highlight: #fd0;
 $color-border: #cbcbcb;
+
+// Text
 $color-text-accent: #757575;
 $color-text-body: #333;
 $color-text-heading: #222;
+
+// Interactive
+$color-link: #1e69cd;
 $mq-smallest: 20em; // 320px
 $mq-small: 40em; // 640px
 $mq-medium: 50em; // 800px
