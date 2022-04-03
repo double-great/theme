@@ -32,16 +32,11 @@ body {
 
 :any-link {
   position: relative;
+  text-decoration: underline;
 
   &:link,
   &:visited {
     color: var(--color-link);
-    text-decoration: underline;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
   }
 
   &:hover {
