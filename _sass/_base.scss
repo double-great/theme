@@ -209,12 +209,13 @@ hr {
 }
 
 img,
+picture,
 svg,
 video,
 canvas {
+  display: block;
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
   border: 0;
 }
 
