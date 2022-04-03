@@ -69,7 +69,7 @@
     color: var(--color-border);
   }
 
-  a {
+  :any-link {
     &:link,
     &:visited {
       color: var(--color-border);
@@ -93,7 +93,7 @@
     }
   }
 
-  .site-footer-logo a {
+  .site-footer-logo :any-link {
     font-weight: $font-weight-black;
   }
 }
@@ -101,7 +101,7 @@
 .social-media-list {
   @extend %unlist;
 
-  a {
+  :any-link {
     display: inline-block;
     margin-bottom: 0.25rem;
   }
