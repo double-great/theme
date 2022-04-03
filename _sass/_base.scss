@@ -85,8 +85,7 @@ h6,
   font-family: $font-body;
   line-height: $line-height-heading;
 
-  a:link,
-  a:visited {
+  :any-link {
     text-decoration: none;
   }
 }
