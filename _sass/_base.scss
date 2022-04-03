@@ -1,6 +1,6 @@
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 
   @media (prefers-reduced-motion: reduce) {
@@ -30,18 +30,13 @@ body {
   background-color: var(--color-background);
 }
 
-a {
+:any-link {
   position: relative;
+  text-decoration: underline;
 
   &:link,
   &:visited {
     color: var(--color-link);
-    text-decoration: underline;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
   }
 
   &:hover {
@@ -79,9 +74,9 @@ h6,
   font-weight: $font-weight-bold;
   font-family: $font-body;
   line-height: $line-height-heading;
+  overflow-wrap: break-word;
 
-  a:link,
-  a:visited {
+  :any-link {
     text-decoration: none;
   }
 }
@@ -204,12 +199,13 @@ hr {
 }
 
 img,
+picture,
 svg,
 video,
 canvas {
+  display: block;
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
   border: 0;
 }
 
