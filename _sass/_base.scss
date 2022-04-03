@@ -84,6 +84,7 @@ h6,
   font-weight: $font-weight-bold;
   font-family: $font-body;
   line-height: $line-height-heading;
+  overflow-wrap: break-word;
 
   :any-link {
     text-decoration: none;
