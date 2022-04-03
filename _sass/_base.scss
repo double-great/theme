@@ -30,7 +30,7 @@ body {
   background-color: var(--color-background);
 }
 
-a {
+:any-link {
   position: relative;
 
   &:link,
