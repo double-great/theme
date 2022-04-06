@@ -115,7 +115,7 @@
     "selector-max-compound-selectors": 4,
     "selector-max-empty-lines": 0,
     "selector-max-id": 0,
-    "selector-max-pseudo-class": 2,
+    "selector-max-pseudo-class": 5,
     "selector-max-specificity": "0,4,2",
     "selector-max-type": 3,
     "selector-max-universal": 2,
