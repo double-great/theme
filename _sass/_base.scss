@@ -39,11 +39,20 @@ body {
     color: var(--color-link);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--color-link-hover);
   }
 
-  &:focus {
+  // avoid flash of focus state on click
+  // stylelint-disable a11y/no-outline-none
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  // stylelint-enable a11y/no-outline-none
+
+  // ensure focus state for keyboard nav
+  &:focus-visible {
     @include focus-with-shadow;
   }
 
