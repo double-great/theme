@@ -1,7 +1,7 @@
 {
   "extends": ["stylelint-config-prettier", "stylelint-config-standard-scss"],
   "plugins": [
-    "stylelint-a11y",
+    "@double-great/stylelint-a11y",
     "stylelint-declaration-block-no-ignored-properties",
     "stylelint-no-unsupported-browser-features",
     "stylelint-scss"
