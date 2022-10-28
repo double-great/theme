@@ -3,8 +3,15 @@ title: Style guide
 layout: page
 ---
 
-<h2 id="variables">Variables</h2>
+<h2 id="contrast">Color contrast</h2>
+<p>Check out a <a href="https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors={%-for key in site.data.variables-%}
+    {%-assign varName = key[0]-%}
+    {%-assign varValue = key[1]-%}
+    {%-if varName contains '$color-'-%}{{varValue | replace: "#", "%23"}}%2C%20{{varName | replace: "$color-", ""}}%0D%0A
+    {%-endif-%}
+{%-endfor-%}&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa">grid of color contrast values across this theme’s palette</a> using the excellent EightShapes Contrast Grid.</p>
 
+<h2 id="variables">Variables</h2>
 <table class="style-table">
   <thead><tr><th class="fix" scope="col">Variable name</th><th scope="col">Value</th></tr></thead>
   <tbody>
