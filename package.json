@@ -26,7 +26,7 @@
   "devDependencies": {
     "@crocsx/scss-to-json": "^3.0.0",
     "@double-great/stylelint-a11y": "^2.0.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.2",
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
     "stylelint": "^14.14.0",
