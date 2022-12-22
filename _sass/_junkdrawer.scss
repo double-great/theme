@@ -71,6 +71,8 @@
   }
 
   :any-link {
+    padding: 0.25rem 0;
+
     &:link,
     &:visited {
       color: var(--color-border);
