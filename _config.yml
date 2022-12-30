@@ -15,6 +15,9 @@ header_pages:
   - documentation.md
   - demo/index.md
 
+sass:
+  style: compressed
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
