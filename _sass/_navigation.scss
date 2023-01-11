@@ -2,10 +2,6 @@
   position: relative;
   width: 1.5rem;
 
-  .no-js & {
-    margin-top: 1rem;
-  }
-
   @include bp($mq-medium) {
     display: inline-block;
     width: auto;
