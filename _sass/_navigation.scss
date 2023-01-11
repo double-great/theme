@@ -20,7 +20,6 @@
   -webkit-appearance: none; // stylelint-disable-line
 
   .no-js & {
-    display: none;
     left: -999em;
     opacity: 0;
   }
@@ -54,10 +53,6 @@
 
   &[aria-hidden="true"] {
     display: none;
-  }
-
-  .no-js & {
-    position: relative;
   }
 
   .db-page-link {
