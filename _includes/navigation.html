@@ -4,12 +4,11 @@
     class="site-menu-button"
     aria-label="Toggle menu"
     aria-controls="db-site-menu"
-    aria-haspopup="true"
     aria-expanded="false"
   >
     {% include icon/menu.svg %}
   </button>
-  <nav id="db-site-menu" aria-hidden="false" class="site-menu pre-js">
+  <nav id="db-site-menu" aria-hidden="false" class="site-menu">
   <ul>
     {%- for path in page_paths -%} {%- assign my_page = site.pages | where:
     "path", path | first -%} {%- if my_page.title -%}
