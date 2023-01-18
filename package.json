@@ -4,7 +4,11 @@
   "description": "Jekyll theme for doublegreat.dev",
   "main": "index.js",
   "scripts": {
-    "test": "bundle exec jekyll build && npm run stylelint",
+    "js": "npm run prettier && npm run eslint && npm run uglify",
+    "prettier": "prettier --write \"assets/*.js\"",
+    "eslint": "eslint \"assets/*.js\"",
+    "uglify": "uglifyjs assets/navigation.js -m -o assets/nav.min.js",
+    "test": "npm run js && bundle exec jekyll build && npm run stylelint",
     "pretty-quick": "pretty-quick",
     "stylelint": "npm run browser-list && stylelint  \"_sass/**/*.scss\" --fix && npm run tokenize",
     "lint": "npm run pretty-quick && npm run stylelint",
@@ -26,8 +30,13 @@
   "devDependencies": {
     "@crocsx/scss-to-json": "^3.0.0",
     "@double-great/stylelint-a11y": "^2.0.2",
-    "husky": "^8.0.2",
-    "prettier": "^2.8.1",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-no-unsanitized": "^4.0.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-xss": "^0.1.12",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.3",
     "pretty-quick": "^3.1.3",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
@@ -35,6 +44,7 @@
     "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.6.0",
     "stylelint-no-unsupported-browser-features": "^6.0.1",
-    "stylelint-scss": "^4.3.0"
+    "stylelint-scss": "^4.3.0",
+    "uglify-js": "3.17.4"
   }
 }

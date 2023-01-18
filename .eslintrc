@@ -1,0 +1,30 @@
+{
+  "root": true,
+
+  "plugins": ["prettier", "xss"],
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:no-unsanitized/DOM",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+
+  "globals": {
+    "matchMedia": true
+  },
+
+  "rules": {
+    "prettier/prettier": "error",
+    "xss/no-location-href-assign": 2
+  }
+}

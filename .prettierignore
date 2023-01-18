@@ -1,2 +1,4 @@
 # Ignore all HTML files:
 *.html
+_site
+assets/nav.min.js
