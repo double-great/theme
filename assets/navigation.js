@@ -26,7 +26,7 @@ function menuHide() {
 }
 
 function triggerMenuHide(event) {
-  if (!nav.contains(event.target)) {
+  if (nav && !nav.contains(event.target)) {
     menuHide();
   }
 }

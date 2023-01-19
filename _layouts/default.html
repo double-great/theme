@@ -14,9 +14,6 @@
     </main>
 
     {%- include footer.html -%}
-    <script>
-      document.body.classList.remove("no-js");
-    </script>
-    {%-if site.header_pages-%}<script src="{{site.baseurl}}/assets/navigation.js" defer></script>{%-endif-%}
+    <script>document.body.classList.remove("no-js");{%- include nav.min.js -%}</script>
   </body>
 </html>
