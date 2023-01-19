@@ -8,7 +8,7 @@
     "prettier": "prettier --write \"assets/*.js\"",
     "eslint": "eslint \"assets/*.js\"",
     "uglify": "uglifyjs assets/navigation.js -m -o _includes/nav.min.js",
-    "test": "npm run js && bundle exec jekyll build && npm run stylelint",
+    "test": "npm run js && npm run stylelint && bundle exec jekyll build",
     "pretty-quick": "pretty-quick",
     "stylelint": "npm run browser-list && stylelint  \"_sass/**/*.scss\" --fix && npm run tokenize",
     "lint": "npm run pretty-quick && npm run stylelint",
