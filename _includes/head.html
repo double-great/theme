@@ -1,19 +1,12 @@
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {%- seo -%}
-  <link rel="preload" href="{{ '/assets/fonts/Inter.var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link
-    rel="stylesheet"
-    href="{{ '/assets/main.css' |
-  relative_url}}"
-  />
-  <link
-    rel="shortcut icon"
-    href="{{ '/assets/favicon.ico' |
-  relative_url }}"
-    type="image/x-icon"
-  />
-  {%- feed_meta -%} {%- if site.custom_head %}{{site.custom_head}}{%- endif -%}
-  {%- if page.css -%}<style>{{page.css}}</style>{%- endif -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- seo -%}
+<link rel="preload" href="{{ '/assets/fonts/Inter.var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="shortcut icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
+<base href="{{ site.url }}{{ site.baseurl }}/">
+{%- feed_meta -%} {%- if site.custom_head %}{{site.custom_head}}{%- endif -%}
+{% capture sass_file %}{% include main.scss %}{% endcapture %}
+<style>{{ sass_file | scssify }}</style>
+{%- if page.css -%}<style>{{page.css}}</style>{%- endif -%}
 </head>
