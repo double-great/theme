@@ -12,7 +12,7 @@
   "$color-background-tertiary": "#f0f0f0",
   "$color-highlight": "#fd0",
   "$color-border": "#cbcbcb",
-  "$color-text-accent": "#757575",
+  "$color-text-accent": "#595959",
   "$color-text-body": "#333",
   "$color-text-heading": "#222",
   "$color-link": "#1e69cd",
