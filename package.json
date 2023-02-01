@@ -31,7 +31,7 @@
   "devDependencies": {
     "@crocsx/scss-to-json": "^3.0.0",
     "@double-great/stylelint-a11y": "^2.0.2",
-    "eslint": "^8.32.0",
+    "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-prettier": "^4.2.1",
