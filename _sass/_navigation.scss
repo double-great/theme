@@ -1,16 +1,11 @@
 .site-navigation {
-  position: relative;
+  position: absolute;
   width: 1.5rem;
-
-  @include bp($mq-medium) {
-    display: inline-block;
-    width: auto;
-  }
+  right: 1rem;
 }
 
 .site-menu-button {
   position: relative;
-  top: -0.25rem;
   width: 1.5rem;
   height: 1.5rem;
   padding: 0;
@@ -18,11 +13,6 @@
   border: 0;
   cursor: pointer;
   -webkit-appearance: none; // stylelint-disable-line
-
-  .no-js & {
-    left: -999em;
-    opacity: 0;
-  }
 
   svg {
     width: 1.5rem;
@@ -50,7 +40,9 @@
   margin-top: 0.25rem;
   background: var(--color-background-tertiary);
   border-radius: 0.25rem;
+  z-index: 1;
 
+  // you're waiting for JS to set this so that it gets hidden!
   &[aria-hidden="true"] {
     display: none;
   }
