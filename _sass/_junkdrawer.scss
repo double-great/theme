@@ -1,5 +1,7 @@
 .wrapper {
   @extend %u-wrap;
+
+  position: relative;
 }
 
 .button {
@@ -124,10 +126,6 @@
   .wrapper {
     display: flex;
     justify-content: space-between;
-
-    .no-js & {
-      display: block;
-    }
   }
 
   .site-title,
@@ -139,7 +137,7 @@
   .site-title {
     flex-grow: 1;
     min-width: 0;
-    margin-right: 1rem;
+    margin-right: 3rem;
   }
 
   .site-title-inner {
