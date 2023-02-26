@@ -6,3 +6,13 @@
   src: url("assets/fonts/Inter.var.woff2") format("woff2");
   font-named-instance: "Regular"; // stylelint-disable-line property-no-unknown
 }
+
+@font-face {
+  font-family: "fallback for Inter";
+  src: local("Arial");
+
+  // via https://github.com/khempenius/font-fallbacks-dataset/blob/main/font-metric-overrides.csv
+  ascent-override: 96.875%; // stylelint-disable-line property-no-unknown
+  descent-override: 24.14772727%; // stylelint-disable-line property-no-unknown
+  line-gap-override: 0%; // stylelint-disable-line property-no-unknown
+}
