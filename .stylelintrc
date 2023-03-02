@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard-scss"],
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
   "plugins": [
     "@double-great/stylelint-a11y",
     "stylelint-declaration-block-no-ignored-properties",
@@ -33,8 +33,8 @@
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-no-redundant-longhand-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
-    "declaration-block-single-line-max-declarations": 1,
     "declaration-no-important": true,
+    "declaration-colon-newline-after": null,
     "font-family-name-quotes": "always-unless-keyword",
     "font-family-no-duplicate-names": true,
     "font-family-no-missing-generic-family-keyword": true,
@@ -73,7 +73,6 @@
     "selector-pseudo-element-no-unknown": true,
     "selector-type-case": "lower",
     "shorthand-property-no-redundant-values": true,
-    "string-no-newline": true,
     "unit-no-unknown": true,
     "unit-allowed-list": [
       "em",
@@ -129,11 +128,6 @@
     "scss/operator-no-unspaced": true,
     "scss/partial-no-import": true,
     "scss/percent-placeholder-pattern": null,
-    "scss/selector-no-redundant-nesting-selector": true,
-    "declaration-property-value-allowed-list": {
-      "/^background$|color$|background-color$|border-color$|stroke/": "/^var\\(--color-/",
-      "box-shadow": "/var\\(--color-|^none$/",
-      "/^border$|^border-(top|right|bottom|left)/": "/var\\(--color-|^none|0$/"
-    }
+    "scss/selector-no-redundant-nesting-selector": true
   }
 }
