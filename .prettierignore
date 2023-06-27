@@ -2,3 +2,4 @@
 *.html
 _site
 _includes/nav.min.js
+_sass/_variables.scss
