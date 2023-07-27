@@ -5,7 +5,10 @@
 }
 
 @mixin bp-max($size) {
-  @media screen and (max-width: $size) {
+  // Using SCSS calc() to reduce variable slightly
+  // on max-width media queries to avoid style collision
+
+  @media screen and (width <= calc(#{size} - 0.01)) {
     @content;
   }
 }
