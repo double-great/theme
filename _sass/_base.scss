@@ -235,7 +235,7 @@ table {
   th,
   td {
     padding: 0.5rem 1rem;
-    word-break: break-word;
+    overflow-wrap: anywhere;
     border: $border-thin solid var(--color-border);
   }
 

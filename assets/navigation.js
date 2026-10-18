@@ -37,7 +37,7 @@ document.addEventListener(
   function (event) {
     triggerMenuHide(event);
   },
-  true
+  true,
 );
 
 // hide menu when click is outside the navigation
@@ -46,5 +46,5 @@ document.addEventListener(
   function (event) {
     triggerMenuHide(event);
   },
-  true
+  true,
 );
