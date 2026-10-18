@@ -30,10 +30,8 @@
 
 // stylelint-disable plugin/no-unsupported-browser-features
 %u-word-wrap {
-  word-wrap: break-word;
   -ms-word-break: break-all;
-  word-break: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   -ms-hyphens: auto; // stylelint-disable-line property-no-vendor-prefix
   -moz-hyphens: auto; // stylelint-disable-line property-no-vendor-prefix
   -webkit-hyphens: auto; // stylelint-disable-line property-no-vendor-prefix
@@ -55,7 +53,6 @@
   overflow: hidden;
   white-space: nowrap;
   border: 0;
-  clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
 // stylelint-enable plugin/no-unsupported-browser-features
@@ -71,6 +68,7 @@
 @mixin focus-with-shadow {
   @include focus;
 
-  box-shadow: 0 -0.125rem var(--color-highlight),
+  box-shadow:
+    0 -0.125rem var(--color-highlight),
     0 0.25rem var(--color-text-body);
 }

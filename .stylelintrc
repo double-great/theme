@@ -116,7 +116,7 @@
 
     "scss/at-extend-no-missing-placeholder": [true, { "severity": "warning" }],
     "scss/at-mixin-pattern": null,
-    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/load-no-partial-leading-underscore": true,
     "scss/comment-no-loud": true,
     "scss/declaration-nested-properties": "never",
     "scss/dollar-variable-colon-space-after": "always",
